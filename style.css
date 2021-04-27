@@ -1,5 +1,91 @@
+/* Draft ไง!!!! */
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Mali:wght@600&display=swap');
 
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/bg.png");
+    /* background-color: #24252a; */
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.scene {
+    position: relative;
+    height: auto;
+}
+
+.sub-1 {
+    position: relative;
+    height: 60vw;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#building_1 {
+    position: absolute;
+    right: -4%;
+    top: -5%;
+    width: 30%;
+    /* scale: 0.6; */
+}
+
+#building_2 {
+    position: absolute;
+    width: 60%;
+}
+
+li, a  {
+    font-family: 'athiti', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+#light {
+    height: 100vw;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+    cursor: default;
+    margin-right: auto; 
+}
+
+.link {
+    list-style: none;
+}
+
+.link li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.link li a {
+    transition: all 0.3s ease 0s;
+}
+
+.link li a:hover {
+    color: #0088a9;
+    /* text-decoration-line: underline; */
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 8% ;
+}
+
+footer {
+    /* background-color: black; */
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 20px 8%;
+    color: white;
     font-family: 'athiti';
 }
