@@ -46,6 +46,7 @@ li, a  {
 
 #light {
     height: 100vw;
+    /* background-color: wheat; */
 }
 
 #logo {
@@ -53,6 +54,23 @@ li, a  {
     height: 70px;
     cursor: default;
     margin-right: auto; 
+}
+
+#logo-epr {
+    position: absolute;
+}
+
+#campaign {
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+}
+
+.campaign {
+
 }
 
 .link {
