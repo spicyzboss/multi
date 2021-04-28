@@ -102,8 +102,33 @@ footer {
     /* background-color: black; */
     display: flex;
     justify-content: flex-end;
-    margin: 0;
-    padding: 20px 8%;
+    margin: 0px;
+    padding: 0px 8%;
     color: white;
     font-family: 'athiti';
+}
+
+.title {
+    color: white;
+    font-family: 'athiti';
+}
+
+.sub-1 {
+    height: 50vw;
+}
+
+.sub-2 {
+    height: 50vw;
+}
+
+.sub-3 {
+    height: 50vw;
+}
+
+.sub-4 {
+    height: 50vw;
+}
+
+#epr {
+    height: 50vw;
 }
