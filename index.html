@@ -4,16 +4,13 @@
         <link rel="icon" href="./images/icon.png" type="image/png">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body style="background-color: black">
-        <!-- <nav>
-            <ul class="horizontal">
-                <li style="float: left; margin-top: 1%">
-                <img src="./images/icon.png" alt="" width="50%" />
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav> -->
+    <script>
+        loaded = () => {
+            document.getElementById("loading").style.display = `none`;
+        }
+    </script>
+    <body onload="loaded()">
+        <img src="./images/loading.svg" id="loading" alt="">
         <div class="subscene">
             <img class="bgElem" id="bg_tree" src="./images/trees.png" width="100%" />
             <img class="bgElem" id="bg_water" src="./images/water.png" width="100%" />
