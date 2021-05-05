@@ -18,15 +18,17 @@ body {
 .subscene {
     margin: 0;
     padding: 0;
-    height: 56vw;
+    height: 80vh;
     position: relative;
 }
+
 .scene {
     position: relative;
     margin: 0;
     padding: 0;
     height: auto;
 }
+
 .bgElem {
     position: absolute;
 }
@@ -35,6 +37,7 @@ body {
     bottom: -30%;
     opacity: 0;
 }
+
 .cause {
     width: 60%;
     height: 40vw;
@@ -45,4 +48,20 @@ body {
     text-align: center;
     /* transition: 3s; */
     /* opacity: 0%; */
+}
+
+#campaign {
+    /* background-color: yellow; */
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-campaign {
+
+}
+
+#bg_epr {
+    /* scale: 0.5; */
 }

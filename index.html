@@ -11,38 +11,29 @@
     </script>
     <body onload="loaded()">
         <img src="./images/loading.svg" id="loading" alt="">
-        <div class="subscene">
-            <img class="bgElem" id="bg_tree" src="./images/trees.png" width="100%" />
-            <img class="bgElem" id="bg_water" src="./images/water.png" width="100%" />
+        <div class="subscene" id="landing_bg">
+          <img class="bgElem" id="bg_tree" src="./images/trees.png" width="100%" />
+          <img class="bgElem" id="bg_water" src="./images/water.png" width="100%" />
+          <img class="bgElem" id="bg_epr" src="./images/epr.png" width="100%" />
         </div>
-        <div class="subscene">
+        <div class="scene" id="ask">
             <div class="cause" id="where">
                 <img src="./images/topic1.png" alt="" width="80%" />
-                <p>
-
-                </p>
             </div>
             <div class="cause" id="impact">
                 <img src="./images/topic2.png" alt="" width="80%" />
-                <p>
-
-                </p>
             </div>
             <div class="cause" id="how">
                 <img src="./images/topic3.png" alt="" width="80%" />
-                <p>
-    
-                </p>
             </div>
             <div class="cause" id="advise">
                 <img src="./images/topic4.png" alt="" width="80%" />
-                <p>
-    
-                </p>
             </div>
         </div>
-        <div class="subscene">
-
-        </div>
+        <!-- <div class="subscene" id="campaign">
+            <p class="center">ร่วมรณรงค์</p>
+            <button class="btn-campaign">ร่วมรณรงค์</button>
+        </div> -->
+        <button onclick="window.location.href='./game.html'" id="game">Play Game</button>
     </body>
 </html>
