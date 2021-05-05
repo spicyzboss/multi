@@ -1,67 +1,91 @@
 body {
-    background-color: black;
+    background-color: lightblue;
     color: #ededed;
     overflow-x: hidden;
     background-image: url(./images/bg.png);
     margin: 0;
     padding: 0;
 }
-
-#loading {
-    width: 5%;
-    position: absolute;
-    left: 48%;
-    bottom: 10%;
-    z-index: 5;
-}
-
 .subscene {
     margin: 0;
     padding: 0;
-    height: 80vh;
+    height: 56vw;
     position: relative;
 }
-
 .scene {
     position: relative;
     margin: 0;
     padding: 0;
     height: auto;
 }
-
-.bgElem {
-    position: absolute;
+ul.horizontal {
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0 5% 0 0;
+    z-index: 5;
 }
-
+ul.horizontal li {
+    float: right;
+    width: 7%;
+    margin: 2%;
+  }
+li a {
+    margin: 0;
+    display: block;
+    text-align: center;
+    font-family: "Athiti";
+    color: white;
+    text-decoration: none;
+}
+li a:hover {
+    transition: 1s;
+    text-decoration: none;
+    color: #F04342;
+}
+.imgEleH {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.2s;
+}
 .openStart{
     bottom: -30%;
     opacity: 0;
 }
-
-.cause {
-    width: 60%;
-    height: 40vw;
+#head1 {
     position: relative;
-    /* top: 50%;
+    width: 100%;
+    background-image: url(/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 200px;
+}
+.intro {
+    width: 60%;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%); */
+    transform: translate(-50%, 0%);
     text-align: center;
     /* transition: 3s; */
     /* opacity: 0%; */
 }
-
 #campaign {
-    /* background-color: yellow; */
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
 }
-
-.center {
-    text-align: center;
-}
-
-.btn-campaign {
-
-}
-
-#bg_epr {
-    /* scale: 0.5; */
+footer {
+    /* background-color: black; */
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0px 8%;
+    color: white;
+    font-family: 'athiti';
 }
