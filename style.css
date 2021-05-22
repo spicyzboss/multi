@@ -5,8 +5,9 @@ body, html {
     padding: 0;
 }
 
-.preload, .landing {
+.landing {
     display: block;
+    position: fixed;
     height: 100vh;
 }
 
@@ -14,7 +15,34 @@ body, html {
     z-index: 9999;
 }
 
+.preload-success {
+    opacity: 0;
+    pointer-events: none;
+}
+
 #epr_full, #epr_short, #bg_plastic {
     position: absolute;
     width: 100%;
+}
+
+#loading {
+    position: absolute;
+    left: 48vw;
+    bottom: 5%;
+    width: 5%;
+    animation: spin-right-round 4s linear infinite;
+}
+
+@keyframes spin-right-round {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(36deg);}
+    20% {transform: rotate(72deg);}
+    30% {transform: rotate(108deg);}
+    40% {transform: rotate(144deg);}
+    50% {transform: rotate(180deg);}
+    60% {transform: rotate(216deg);}
+    70% {transform: rotate(252deg);}
+    80% {transform: rotate(288deg);}
+    90% {transform: rotate(324deg);}
+    100% {transform: rotate(360deg);}
 }
