@@ -5,10 +5,14 @@ body, html {
     padding: 0;
 }
 
-/* #bg01, #bg02, #logo {
-    position: absolute;
-    width: 100%;
-} */
+.preload, .landing {
+    display: block;
+    height: 100vh;
+}
+
+.preload {
+    z-index: 9999;
+}
 
 #epr_full, #epr_short, #bg_plastic {
     position: absolute;
