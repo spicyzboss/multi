@@ -1,67 +1,16 @@
-body {
+body, html {
     background-color: black;
-    color: #ededed;
     overflow-x: hidden;
-    background-image: url(./images/bg.png);
     margin: 0;
     padding: 0;
 }
 
-#loading {
-    width: 5%;
+/* #bg01, #bg02, #logo {
     position: absolute;
-    left: 48%;
-    bottom: 10%;
-    z-index: 5;
-}
+    width: 100%;
+} */
 
-.subscene {
-    margin: 0;
-    padding: 0;
-    height: 80vh;
-    position: relative;
-}
-
-.scene {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: auto;
-}
-
-.bgElem {
+#epr_full, #epr_short, #bg_plastic {
     position: absolute;
-}
-
-.openStart{
-    bottom: -30%;
-    opacity: 0;
-}
-
-.cause {
-    width: 60%;
-    height: 40vw;
-    position: relative;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%); */
-    text-align: center;
-    /* transition: 3s; */
-    /* opacity: 0%; */
-}
-
-#campaign {
-    /* background-color: yellow; */
-}
-
-.center {
-    text-align: center;
-}
-
-.btn-campaign {
-
-}
-
-#bg_epr {
-    /* scale: 0.5; */
+    width: 100%;
 }
