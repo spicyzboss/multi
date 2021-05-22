@@ -5,7 +5,7 @@ body, html {
     padding: 0;
 }
 
-.landing {
+.landing, .content {
     display: block;
     height: 100vh;
 }
@@ -14,14 +14,26 @@ body, html {
     z-index: 9999;
 }
 
-.preload-success {
-    opacity: 0;
-    pointer-events: none;
-}
-
-#epr_full, #epr_short, #bg_plastic {
+#epr_full,
+#epr_short,
+#bg_plastic,
+#epr_thai1,
+#epr_thai2,
+#epr_thai3 {
     position: absolute;
     width: 100%;
+    transition: opacity 3s;
+}
+
+#epr_thai1,
+#epr_thai2,
+#epr_thai3 {
+    opacity: 0;
+}
+
+.hide {
+    display: none;
+    pointer-events: none;
 }
 
 #loading {
@@ -44,4 +56,14 @@ body, html {
     80% {transform: rotate(288deg);}
     90% {transform: rotate(324deg);}
     100% {transform: rotate(360deg);}
+}
+
+.epr-thai1 {
+
+}
+.epr-thai2 {
+
+}
+.epr-thai3 {
+
 }
