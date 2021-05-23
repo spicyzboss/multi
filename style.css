@@ -14,27 +14,23 @@ body, html {
     z-index: 9999;
 }
 
+/* #epr_thai1,
+#epr_thai2,
+#epr_thai3, */
 #water,
 #epr_full,
 #epr_short,
-#bg_plastic,
-#epr_thai1,
-#epr_thai2,
-#epr_thai3 {
+#bg_plastic {
     position: absolute;
     width: 100%;
     transition: opacity 3s;
 }
 
-#water {
-    transform: translateY(-20px);
-}
-
-#epr_thai1,
+/* #epr_thai1,
 #epr_thai2,
 #epr_thai3 {
     opacity: 0;
-}
+} */
 
 .hide {
     display: none;
@@ -91,6 +87,9 @@ body, html {
 .back-to-top:hover {
     background: whitesmoke;
     color: #fff;
+}
+.back-to-top i:hover {
+    color:black;
 }
   
 .back-to-top.active {
