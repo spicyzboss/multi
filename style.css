@@ -14,7 +14,7 @@ body, html {
     z-index: 9999;
 }
 
-#city,
+#water,
 #epr_full,
 #epr_short,
 #bg_plastic,
@@ -24,6 +24,10 @@ body, html {
     position: absolute;
     width: 100%;
     transition: opacity 3s;
+}
+
+#water {
+    transform: translateY(-20px);
 }
 
 #epr_thai1,
