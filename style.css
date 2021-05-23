@@ -1,6 +1,5 @@
 body, html {
     background-image: url("./img/background.png");
-    /* background-color: #272727; */
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -21,8 +20,6 @@ body, html {
 #water_top,
 #head,
 #waste1,
-/* #epr_full,
-#epr_short, */
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -42,11 +39,7 @@ body, html {
 
 #loading {
     position: relative;
-    /* left: 49vw;
-    top: 5%; */
     scale: 2;
-    /* width: 5%; */
-    /* animation: spin-right-round 2s linear infinite; */
 }
 .top_box {
     width: 100%;
@@ -159,10 +152,9 @@ body, html {
     opacity: 1;
 }
 
-.up-down {
+/* .up-down {
 
 }
-
 @keyframes up-down {
     0% {translateY}
-}
+} */
