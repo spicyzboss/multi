@@ -1,4 +1,4 @@
-let my_curent_Coin = 2500, my_curent_Fame = 0,
+let my_curent_Coin = 500, my_curent_Fame = 0,
     my_curent_Product = 0, my_curent_Returned = 0,
   produced = 0, bad_fame = 0, all_returned = 0,fame_make_money;
 
