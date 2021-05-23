@@ -6,24 +6,16 @@ body, html {
 }
 
 #background {
-    width: 100%;
-    position: absolute;
     z-index: 0;
-}
-
-.landing {
-    display: block;
-    height: 1080px;
 }
 
 .preload {
     z-index: 9999;
 }
 
-/* #epr_thai1,
-#epr_thai2,
-#epr_thai3, */
-#arrow1,
+#background,
+#arrow_left,
+#arrow_right,
 #howmuch_head,
 #howmuch_info1,
 #howmuch_info2,
@@ -34,14 +26,7 @@ body, html {
 #plastic_top {
     position: absolute;
     width: 100%;
-    transition: opacity 3s;
 }
-
-/* #epr_thai1,
-#epr_thai2,
-#epr_thai3 {
-    opacity: 0;
-} */
 
 #waste1 {
     animation: up-down 2.5s linear infinite alternate;
@@ -59,6 +44,24 @@ body, html {
     width: 40%;
     margin-top: 92vw;
     margin-left: 4vw;
+}
+
+#arrow_left, #arrow_right {
+    width: 15%;
+    margin-top: 100vw;
+    cursor: pointer;
+}
+#arrow_left {
+    margin-left: -4vw;
+}
+#arrow_left:hover {
+    content: url(./img/arrow_left2.png);
+}
+#arrow_right {
+    margin-left: 35vw;
+}
+#arrow_right:hover {
+    content: url(./img/arrow_right2.png);
 }
 
 @keyframes up-down {
