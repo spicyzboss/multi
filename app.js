@@ -2,22 +2,10 @@ const preload = document.querySelector(".preload")
 const loaded = document.querySelector(".loaded")
 loaded.classList.add("hide")
 document.querySelector("html").style.overflowY = `hidden`
-// const epr_thai1 = document.querySelector("#epr_thai1")
-// const epr_thai2 = document.querySelector("#epr_thai2")
-// const epr_thai3 = document.querySelector("#epr_thai3")
 window.addEventListener("load", () => {
     preload.classList.add("hide")
     loaded.classList.remove("hide")
     document.querySelector("html").style.overflowY = `auto`
-    // setInterval(() => {
-    //     epr_thai1.style.opacity = 100;
-    // }, 4500);
-    // setInterval(() => {
-    //     epr_thai2.style.opacity = 100;
-    // }, 5000);
-    // setInterval(() => {
-    //     epr_thai3.style.opacity = 100;
-    // }, 5700);
 })
 
 /**

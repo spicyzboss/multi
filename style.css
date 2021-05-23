@@ -13,6 +13,10 @@ body, html {
     z-index: 9999;
 }
 
+#arrow_left_preload, #arrow_right_preload {
+    display: none;
+}
+
 #background,
 #arrow_left,
 #arrow_right,
