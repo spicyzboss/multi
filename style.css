@@ -1,9 +1,14 @@
 body, html {
-    background-image: url("./img/background.png");
     background-color: black;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+}
+
+#background {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
 }
 
 .landing {
@@ -18,7 +23,11 @@ body, html {
 /* #epr_thai1,
 #epr_thai2,
 #epr_thai3, */
+#arrow1,
 #howmuch_head,
+#howmuch_info1,
+#howmuch_info2,
+#howmuch_info3,
 #water_top,
 #head,
 #waste1,
@@ -43,10 +52,13 @@ body, html {
     pointer-events: none;
 }
 
+#howmuch_info1,
+#howmuch_info2,
+#howmuch_info3,
 #howmuch_head {
     width: 40%;
-    margin-top:92vw;
-    margin-left:30px;
+    margin-top: 92vw;
+    margin-left: 4vw;
 }
 
 @keyframes up-down {
@@ -54,6 +66,10 @@ body, html {
     100% {transform: translateY(40px)}
 }
 
+/* ————————————————————— อย่าซนสิ ————————————————————— */
+/* 
+* Preloader หมุนๆ แบบหล่อเท่
+*/
 #loading {
     position: relative;
     scale: 2;
@@ -133,6 +149,9 @@ body, html {
     100% { transform: rotate(0) }
 }
 
+/* 
+* Back to top button
+*/
 .back-to-top {
     position: fixed;
     display: inline-block;
