@@ -38,7 +38,7 @@ setInterval(()=>{
     if(my_curent_Product >= 100){
         bubble_sell_product.dataset.for = `sell_product_ready`
     }
-    if(my_curent_Returned>= 0 && recycle_inuse>0){
+    if(my_curent_Returned>= 100 && recycle_inuse>0){
         if(recycle_inuse >0){
             recycle_on_map = Array.prototype.slice.call(lands).filter(a => a.dataset.building=="Recycle");
             console.log(`re_on_map`+ recycle_on_map);
