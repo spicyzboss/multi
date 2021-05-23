@@ -41,12 +41,21 @@ body, html {
 }
 
 #loading {
-    position: absolute;
-    left: 49vw;
-    top: 5%;
+    position: relative;
+    /* left: 49vw;
+    top: 5%; */
     scale: 2;
     /* width: 5%; */
     /* animation: spin-right-round 2s linear infinite; */
+}
+.top_box {
+    width: 100%;
+    top: 5%;
+    height: 5%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
 }
 .pswp__preloader__icn {
     opacity:0.75;
@@ -55,8 +64,6 @@ body, html {
     -webkit-animation: clockwise 500ms linear infinite;
     animation: clockwise 500ms linear infinite;
 }
-
-/* The idea of animating inner circle is based on Polymer loading indicator by Keanu Lee https://blog.keanulee.com/2014/10/20/the-tale-of-three-spinners.html */
 .pswp__preloader__cut {
     position: relative;
     width: 7px;
@@ -66,7 +73,6 @@ body, html {
     top: 0;
     left: 0;
 }
-
 .pswp__preloader__donut--fake {
     box-sizing: border-box;
     width: 14px;
@@ -79,7 +85,6 @@ body, html {
     background: none;
     margin:0;
 }
-  
 .pswp__preloader__donut {
     box-sizing: border-box;
     width: 14px;
@@ -137,7 +142,6 @@ body, html {
     padding: 5px;
     padding-left: 11.5px;
 }
-
 .back-to-top i {
     font-size: 25px;
     color: #fff;
@@ -150,7 +154,6 @@ body, html {
 .back-to-top i:hover {
     color:black;
 }
-  
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
