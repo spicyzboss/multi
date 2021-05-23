@@ -59,12 +59,37 @@ body, html {
     100% {transform: rotate(360deg);}
 }
 
-.epr-thai1 {
-
+.back-to-top {
+    position: fixed;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    padding: 5px;
+    padding-left: 11.5px;
 }
-.epr-thai2 {
 
+.back-to-top i {
+    font-size: 25px;
+    color: #fff;
+    line-height: 0;
 }
-.epr-thai3 {
-
+.back-to-top:hover {
+    background: whitesmoke;
+    color: #fff;
+}
+  
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
 }
