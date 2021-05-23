@@ -2,11 +2,39 @@ const preload = document.querySelector(".preload")
 const loaded = document.querySelector(".loaded")
 loaded.classList.add("hide")
 document.querySelector("html").style.overflowY = `hidden`
+var arrow_state = 1
+const howmuch_content = document.querySelector("#howmuch_info")
+const arrow_left = document.querySelector("#arrow_left")
+const arrow_right = document.querySelector("#arrow_right")
 window.addEventListener("load", () => {
     preload.classList.add("hide")
     loaded.classList.remove("hide")
     document.querySelector("html").style.overflowY = `auto`
 })
+left_arrow = () => {
+    arrow_state--;
+    if (arrow_state < 1) {
+        arrow_state = 3
+    }
+    decision()
+}
+right_arrow = () => {
+    arrow_state++;
+    if (arrow_state > 3) {
+        arrow_state = 1
+    }
+    decision()
+}
+decision = () => {
+    console.log(arrow_state)
+    if (arrow_state == 1) {
+        howmuch_content.src = `./img/howmuch_info1.png`
+    } else if (arrow_state == 2) {
+        howmuch_content.src = `./img/howmuch_info2.png`
+    } else if (arrow_state == 3) {
+        howmuch_content.src = `./img/howmuch_info3.png`
+    }
+}
 
 /**
  * Back to top button
