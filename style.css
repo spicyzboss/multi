@@ -1,5 +1,6 @@
 body, html {
     background-image: url("./img/background.png");
+    background-color: black;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@ body, html {
 /* #epr_thai1,
 #epr_thai2,
 #epr_thai3, */
+#howmuch_head,
 #water_top,
 #head,
 #waste1,
@@ -32,9 +34,24 @@ body, html {
     opacity: 0;
 } */
 
+#waste1 {
+    animation: up-down 2.5s linear infinite alternate;
+}
+
 .hide {
     display: none;
     pointer-events: none;
+}
+
+#howmuch_head {
+    width: 40%;
+    margin-top:92vw;
+    margin-left:30px;
+}
+
+@keyframes up-down {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(40px)}
 }
 
 #loading {
@@ -151,10 +168,3 @@ body, html {
     visibility: visible;
     opacity: 1;
 }
-
-/* .up-down {
-
-}
-@keyframes up-down {
-    0% {translateY}
-} */
