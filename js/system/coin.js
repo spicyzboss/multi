@@ -2,7 +2,7 @@ let my_curent_Coin = 500, my_curent_Fame = 0,
     my_curent_Product = 0, my_curent_Returned = 0,
   produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money;
 
-setInterval(()=>{
+let per_Sec = setInterval(()=>{
     if(my_curent_Fame < 100){
         return_package_per_sec = Math.floor(Math.random()*4)/10;
         fame_make_money = 1;
@@ -66,7 +66,7 @@ setInterval(()=>{
 function sellProduct(){
     if(my_curent_Product >= 100){
         my_curent_Product -= 100;
-        my_curent_Coin += 100*curent_coin_package_status.innerHTML;
+        my_curent_Coin += 100*fame_make_money*curent_coin_package_status.innerHTML;
     }
 }
 function showStatus(){
