@@ -87,6 +87,7 @@ body, html {
 #solve_reject,
 #solve_fish,
 #solve_text2,
+#col_epr_img2,
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -465,6 +466,13 @@ body, html {
 #solve_text2 {
     width: 37%;
     margin-top: 412vw;
+    margin-left: 5vw;
+}
+
+/* ——————————————————————— EPR ——————————————————————— */
+#col_epr_img2 {
+    width: 37%;
+    margin-top: 432vw;
     margin-left: 5vw;
 }
 
