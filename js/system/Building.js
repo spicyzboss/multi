@@ -21,7 +21,7 @@ function countBuilding(){
         else if(land.dataset.building === "Fac2")
             fac2_inuse++;
 });
-bad_fame_per_sec_building = 6*fac2_inuse
+bad_fame_per_sec_building = 4*fac2_inuse
 fame_per_sec_building = bad_fame_per_sec_building +(3*(returnPackage_inuse+recycle_inuse));
 console.log(`fac2: `+fac2_inuse);
 console.log(`returnPackage: `+returnPackage_inuse);
