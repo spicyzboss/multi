@@ -19,7 +19,7 @@ body, html {
     color: white;
     font-weight: bold;
     right: 15px;
-    bottom: 70px;
+    bottom: 15px;
     border-radius: 20px;
     padding: 1% 2% 1% 2%;
     border: none;
@@ -45,11 +45,23 @@ body, html {
 #where_fish,
 #where_bubble,
 #howmuch_head,
+#howmuch_earth,
 #howmuch_thai,
 #howmuch_waste1,
 #howmuch_text1,
 #howmuch_text2,
 #howmuch_text3,
+#howmuch_virus1,
+#howmuch_virus2,
+#howmuch_virus3,
+#howmuch_virus4,
+#howmuch_garbage,
+#howmuch_garbage2,
+#howmuch_bubble1,
+#howmuch_bubble2,
+#howmuch_bubble3,
+#howmuch_bubble4,
+#howmuch_bubble5,
 #head_effect,
 #effect_nature,
 #effect_human,
@@ -187,6 +199,50 @@ body, html {
     margin-top: 215vw;
     margin-left: 53vw;
 }
+#howmuch_earth,
+#howmuch_virus1,
+#howmuch_virus2,
+#howmuch_virus3,
+#howmuch_virus4 {
+    transition: opacity 1s;
+}
+#howmuch_earth {
+    width: 48%;
+    margin-top: 203vw;
+    margin-left: 2vw;
+}
+#howmuch_virus1 {
+    width: 10%;
+    margin-top: 209vw;
+    margin-left: 10vw;
+}
+#howmuch_virus2 {
+    width: 8%;
+    margin-top: 230vw;
+    margin-left: 18vw;
+}
+#howmuch_virus3 {
+    width: 13%;
+    margin-top: 214vw;
+    margin-left: 22vw;
+}
+#howmuch_virus4 {
+    width: 11%;
+    margin-top: 207vw;
+    margin-left: 31vw;
+}
+#howmuch_garbage,
+#howmuch_garbage2,
+#howmuch_bubble1,
+#howmuch_bubble2,
+#howmuch_bubble3,
+#howmuch_bubble4,
+#howmuch_bubble5,
+#howmuch_thai,
+#howmuch_waste1 {
+    opacity: 0;
+    transition: opacity 1s;
+}
 #howmuch_thai {
     width: 55%;
     margin-top: 200vw;
@@ -195,6 +251,41 @@ body, html {
     width: 20%;
     margin-top: 228vw;
     margin-left: 23vw;
+}
+#howmuch_garbage {
+    width: 40%;
+    margin-top: 216vw;
+    margin-left: 3vw;
+}
+#howmuch_garbage2 {
+    width: 20%;
+    margin-top: 213vw;
+    margin-left: 15vw;
+}
+#howmuch_bubble1 {
+    width: 10%;
+    margin-top: 210vw;
+    margin-left: 25vw;
+}
+#howmuch_bubble2 {
+    width: 12%;
+    margin-top: 214vw;
+    margin-left: 10vw;
+}
+#howmuch_bubble3 {
+    width: 9%;
+    margin-top: 225vw;
+    margin-left: 5vw;
+}
+#howmuch_bubble4 {
+    width: 11%;
+    margin-top: 220vw;
+    margin-left: 24vw;
+}
+#howmuch_bubble5 {
+    width: 9%;
+    margin-top: 227vw;
+    margin-left: 33vw;
 }
 #howmuch_text1,
 #howmuch_text2,
@@ -216,31 +307,24 @@ body, html {
     margin-top: 224vw;
     margin-left: 51vw;
 }
-#arrow_left2,
-#arrow_right2 {
-    opacity: 0;
-}
 #arrow_left,
-#arrow_left2,
-#arrow_right2,
 #arrow_right {
     position: absolute;
     width: 6%;
     margin-top: 231.5vw;
     cursor: pointer;
-    transition: opacity 1s;
 }
-#arrow_left2,
 #arrow_left {
     margin-left: 45vw;
 }
-#arrow_right:hover,
-#arrow_left:hover {
-    opacity: 0;
-}
-#arrow_right2,
 #arrow_right {
     margin-left: 87vw;
+}
+#arrow_right:hover {
+    content: url("./img/howmuch2_right_button.png");
+}
+#arrow_left:hover {
+    content: url("./img/howmuch2_left_button.png");
 }
 
 /* ——————————————————————— effect ——————————————————————— */
@@ -378,7 +462,7 @@ body, html {
     visibility: hidden;
     opacity: 0;
     right: 15px;
-    bottom: 15px;
+    bottom: 80px;
     z-index: 996;
     background: gray;
     width: 40px;

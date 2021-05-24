@@ -24,20 +24,76 @@ right_arrow = () => {
     }
     decision()
 }
+howmuch_earth = document.querySelector("#howmuch_earth")
+howmuch_virus1 = document.querySelector("#howmuch_virus1")
+howmuch_virus2 = document.querySelector("#howmuch_virus2")
+howmuch_virus3 = document.querySelector("#howmuch_virus3")
+howmuch_virus4 = document.querySelector("#howmuch_virus4")
+howmuch_thai = document.querySelector("#howmuch_thai")
+howmuch_waste1 = document.querySelector("#howmuch_waste1")
+howmuch_garbage = document.querySelector("#howmuch_garbage")
+howmuch_garbage2 = document.querySelector("#howmuch_garbage2")
+howmuch_bubble1 = document.querySelector("#howmuch_bubble1")
+howmuch_bubble2 = document.querySelector("#howmuch_bubble2")
+howmuch_bubble3 = document.querySelector("#howmuch_bubble3")
+howmuch_bubble4 = document.querySelector("#howmuch_bubble4")
+howmuch_bubble5 = document.querySelector("#howmuch_bubble5")
 howmuch_text1 = document.querySelector("#howmuch_text1")
 howmuch_text2 = document.querySelector("#howmuch_text2")
 howmuch_text3 = document.querySelector("#howmuch_text3")
 decision = () => {
     console.log(arrow_state)
     if (arrow_state == 1) {
+        howmuch_earth.style.opacity = 100
+        howmuch_virus1.style.opacity = 100
+        howmuch_virus2.style.opacity = 100
+        howmuch_virus3.style.opacity = 100
+        howmuch_virus4.style.opacity = 100
+        howmuch_thai.style.opacity = 0
+        howmuch_waste1.style.opacity = 0
+        howmuch_garbage.style.opacity = 0
+        howmuch_garbage2.style.opacity = 0
+        howmuch_bubble1.style.opacity = 0
+        howmuch_bubble2.style.opacity = 0
+        howmuch_bubble3.style.opacity = 0
+        howmuch_bubble4.style.opacity = 0
+        howmuch_bubble5.style.opacity = 0
         howmuch_text1.style.opacity = 100
         howmuch_text2.style.opacity = 0
         howmuch_text3.style.opacity = 0
     } else if (arrow_state == 2) {
+        howmuch_earth.style.opacity = 0
+        howmuch_virus1.style.opacity = 0
+        howmuch_virus2.style.opacity = 0
+        howmuch_virus3.style.opacity = 0
+        howmuch_virus4.style.opacity = 0
+        howmuch_thai.style.opacity = 100
+        howmuch_waste1.style.opacity = 100
+        howmuch_garbage.style.opacity = 0
+        howmuch_garbage2.style.opacity = 0
+        howmuch_bubble1.style.opacity = 0
+        howmuch_bubble2.style.opacity = 0
+        howmuch_bubble3.style.opacity = 0
+        howmuch_bubble4.style.opacity = 0
+        howmuch_bubble5.style.opacity = 0
         howmuch_text1.style.opacity = 0
         howmuch_text2.style.opacity = 100
         howmuch_text3.style.opacity = 0
     } else if (arrow_state == 3) {
+        howmuch_earth.style.opacity = 0
+        howmuch_virus1.style.opacity = 0
+        howmuch_virus2.style.opacity = 0
+        howmuch_virus3.style.opacity = 0
+        howmuch_virus4.style.opacity = 0
+        howmuch_thai.style.opacity = 0
+        howmuch_waste1.style.opacity = 0
+        howmuch_garbage.style.opacity = 100
+        howmuch_garbage2.style.opacity = 100
+        howmuch_bubble1.style.opacity = 100
+        howmuch_bubble2.style.opacity = 100
+        howmuch_bubble3.style.opacity = 100
+        howmuch_bubble4.style.opacity = 100
+        howmuch_bubble5.style.opacity = 100
         howmuch_text1.style.opacity = 0
         howmuch_text2.style.opacity = 0
         howmuch_text3.style.opacity = 100
