@@ -189,7 +189,7 @@ function EndGame(){
         <div><h1 class="EndHeader">For the world!!, good bye my money </h1>
         <p class="Ending-text">Congratulations on your actions that make the environment better.
              You have done what the operator should do. But you lost some amount</p></div>
-             <a href="landing.html" target="_self"><button class="ToLanding">
+             <a href="landing.html" target="_blank"><button class="ToLanding">
              Read Campaign
         </button>
         </a>
@@ -201,4 +201,3 @@ function EndGame(){
     Total_recycle.innerHTML = RecycleUse;
     redEnd.style.width = bad_fame_percent;
 }
-
