@@ -83,6 +83,21 @@ body, html {
     margin-top: 110vw;
     margin-left: 29vw;
 }
+.btn1,
+#button_where2,
+#button_where3 {
+    position: absolute;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+.btn1 {
+    width: 16%;
+    margin-top: 107vw;
+    margin-left: 42.1vw;
+}
+#button_where1:hover {
+    opacity: 0;
+}
 
 .hide {
     display: none;
