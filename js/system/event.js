@@ -1,3 +1,4 @@
+let per_day = `Ready`;
 let AirPolution = `
 <p class="quiz">   Your company has detected that there is damage to production that could cause air pollution.
  But there is no impact on product manufacturing How do you fix it?</p>
@@ -29,10 +30,12 @@ let EnvelonmentConcern = `<p class="quiz">  Right now, there is a lot of plastic
 var all_event = [AirPolution, ProductProblem, EnvelonmentConcern];
 
 function eventCall(){
-    let get_event = Math.floor(Math.random()*all_event.length);
-    EventShowUp.dataset.state = `on`;
-    EventShowUp.innerHTML = all_event[get_event];
-
+    if(per_day === `Ready`){
+        per_day = `AlreadyUse`
+        let get_event = Math.floor(Math.random()*all_event.length);
+        EventShowUp.dataset.state = `on`;
+        EventShowUp.innerHTML = all_event[get_event];
+    }
 }
 
 function Answer(chose, question){
@@ -43,6 +46,7 @@ function Answer(chose, question){
         result_Product(chose);
     else
         result_Env(chose);
+
 }
 
 function result_Polution(chose){
@@ -62,32 +66,34 @@ function result_Polution(chose){
         produce_state = 0;
         setTimeout(()=>{
             produce_state = 1;
-        }, 10000);
+        }, 6000);
         my_curent_Fame+= 50;
     }
     else if(chose === 2){
         produce_state = 0;
         setTimeout(()=>{
             produce_state = 1;
-        }, 20000);
+        }, 8000);
     }
     else if(chose === 3){
         let chance = Math.floor(Math.random()*2);
         if(chance === 1){
             EventShowUp.innerHTML =  reply[2]+`<div data-situation="Polution" class="ImgEvent"></div>`;
-        produce_state = 0;
-        setTimeout(()=>{
-            produce_state = 1;
-        }, 15000);
+        let accident = Math.floor(Math.random()*3);
+        lands[accident].dataset.building = `none`
+        lands[accident].innerHTML = `<g transform="translate(-130 -20) skewY(-26.5) skewX(45)">
+        <rect width="45" height="62" x="30" y="140" stroke-width="2" fill="#d4c342" />
+    </g>`;
+
         }
         else{
             EventShowUp.innerHTML =  reply[3]+`<div data-situation="Polution" class="ImgEvent"></div>`;
         }
         
     }
-    setTimeout(()=>{
         EventShowUp.dataset.state = `off`;
-    }, 1000);
+        console.log(`+++`+EventShowUp.dataset.state)
+
 
 }
 
@@ -128,7 +134,7 @@ function result_Env(chose){
         produce_state = 0;
         setTimeout(()=>{
             produce_state = 1;
-        }, 10000);
+        }, 6000);
         my_curent_Fame += (my_curent_Fame-bad_fame)*6/100;
     }
     else if(chose === 2){
