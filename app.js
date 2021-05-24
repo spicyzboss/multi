@@ -10,6 +10,9 @@ const arrow_right = document.querySelector("#arrow_right")
 //     loaded.classList.remove("hide")
 // })
 document.querySelector("html").style.overflowY = `auto`
+move = () => {
+    window.location.href = `https://www.greenpeace.org/thailand/act/refuseplastic/`
+}
 left_arrow = () => {
     arrow_state--;
     if (arrow_state < 1) {
