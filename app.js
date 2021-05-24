@@ -55,7 +55,7 @@ function isInViewport(element) {
     );
 }
 
-playGame = () => window.location.href = `game.html`
+playGame = () => window.location.href = `index.html`
 
 window.addEventListener("mousewheel", () => {
     if (isInViewport(document.querySelector("#button_where1"))) {
