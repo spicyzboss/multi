@@ -190,7 +190,7 @@ function EndGame(){
         <p class="Ending-text">Congratulations on your actions that make the environment better.
              You have done what the operator should do. But you lost some amount</p></div>
              <a href="https://plastic-epr.netlify.app/" target="_blank"><button class="ToLanding">
-            Go To Landing Page
+             Read Campaign
         </button>
         </a>
              `;
