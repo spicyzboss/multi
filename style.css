@@ -131,13 +131,13 @@ body, html {
 }
 #waste1 {
     margin-top: 25vw;
-    animation: up-down 2.5s linear infinite alternate;
+    animation: up-down 2.5s infinite ease-in-out;
 }
 #waste2 {
     width: 40%;
     margin-top: 60vw;
     margin-left: 46vw;
-    animation: up-down 3s linear 1s infinite alternate;
+    animation: up-down 4s infinite ease-in-out;
 }
 
 #quotes {
@@ -216,23 +216,27 @@ body, html {
 }
 #where_waste1 {
     width: 28%;
-    margin-top: 120vw;
+    margin-top: 115vw;
     margin-left: 56vw;
+    animation: up-down 2.5s infinite ease-in-out;
 }
 #where_waste2 {
     width: 32%;
     margin-top: 133vw;
     margin-left: 10vw;
+    animation: up-down 3s infinite ease-in-out;
 }
 #where_fish {
     width: 28%;
     margin-top: 150vw;
     margin-left: 61vw;
+    animation: up-down 4.5s infinite ease-in-out;
 }
 #where_bubble {
     width: 32%;
     margin-top: 149vw;
     margin-left: 59vw;
+    animation: up-down 4.5s infinite ease-in-out;
 }
 
 /* ——————————————————————— howmuch ——————————————————————— */
@@ -799,4 +803,14 @@ body, html {
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
+}
+@keyframes up-down-low {
+    0% {transform: translateY(10px)}
+    50% {transform: translateY(0)}
+    100% {transform: translateY(10px)}
+}
+@keyframes up-down-left-right {
+    0% {transform: translateX(20px)}
+    50% {transform: translateX(0)}
+    100% {transform: translateX(20px)}
 }
