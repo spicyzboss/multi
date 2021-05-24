@@ -50,11 +50,18 @@
     height: 10%;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom, rgb(144, 144, 243), navy);
+    background: navy;
     color:white;
     font-size: 15px;
     bottom: 5%;
     left: 42.5%;
     font-family: Alloy;
+    cursor: pointer;
+    box-shadow:5px 5px rgb(8, 8, 77);
+
+}
+.ToLanding:hover{
+    transform: translateY(4px);
+    box-shadow:1px 1px rgb(8, 8, 77);
 
 }
