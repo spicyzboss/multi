@@ -15,7 +15,7 @@ Edit.innerHTML = `<div class="modelCollect">
             <button class="preButt bot" onclick="navi('pre', allModel[2], curentBot)"><div class="arrowPre"></div></button>
             <button class="nextButt bot" onclick="navi('next', allModel[2], curentBot)"><div class="arrowNext"></div></button>
             <div id="CloseEd"></div>
-            <div class="status_package">Curent status: <img class="coin" src="pic/coin.png"/> <span id="curent_coin_package_status">9</span>/s  <img class="coin" src="pic/fame.png"/> <span id="curent_fame_package_status">3</span>/s</div>
+            <div class="status_package">Curent status: <img class="coin" src="pic/coin.png"/> <span id="curent_coin_package_status">9</span>  <img class="coin" src="pic/fame.png"/> <span id="curent_fame_package_status">3</span>/s</div>
             `;
 let curentTop = 0;
 let curentCen = 0;

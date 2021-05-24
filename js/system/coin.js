@@ -1,6 +1,6 @@
 let my_curent_Coin = 500, my_curent_Fame = 0,
     my_curent_Product = 0, my_curent_Returned = 0,
-  produced = 0, bad_fame = 0, all_returned = 0,fame_make_money;
+  produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money;
 
 setInterval(()=>{
     if(my_curent_Fame < 100){
@@ -23,9 +23,9 @@ setInterval(()=>{
         all_returned += return_package_per_sec;
         my_curent_Returned += returnPackage_inuse*return_package_per_sec;
     }
-    my_curent_Fame += fame_per_sec_package+fame_per_sec_building;
-    my_curent_Product += 2+2*fac2_inuse;
-    produced += 2+2*fac2_inuse
+    my_curent_Fame += (fame_per_sec_package+fame_per_sec_building)*produce_state;
+    my_curent_Product += (2+2*fac2_inuse)*produce_state;
+    produced += (2+2*fac2_inuse)*produce_state;
     bad_fame += bad_fame_per_sec_package+bad_fame_per_sec_building;
     myCoin.innerHTML = Math.round(my_curent_Coin);
     myFame.innerHTML = Math.round(my_curent_Fame*100)/100;
@@ -36,7 +36,10 @@ setInterval(()=>{
     fameFlow.innerHTML = fame_per_sec_package+fame_per_sec_building;
     badFame.style.width = Math.round(bad_fame*100/my_curent_Fame)+'%';
     if(my_curent_Product >= 100){
-        bubble_sell_product.dataset.for = `sell_product_ready`
+        bubble_sell_product.dataset.for = `sell_product_ready`;
+    }
+    else{
+        bubble_sell_product.dataset.for = `sell_product_notReady`;
     }
     if(my_curent_Returned>= 100 && recycle_inuse>0){
         if(recycle_inuse >0){
@@ -67,7 +70,8 @@ function sellProduct(){
     }
 }
 function showStatus(){
-    RecZone.style.transition = "0.5s";
+    RecZone.style.transition = "1s";
     RecZone.classList.toggle("hideStatus");
     setTimeout(()=>{RecZone.style.transition = "none";},1000)
+    hideToggle.classList.toggle("rotateInvert");
 }
