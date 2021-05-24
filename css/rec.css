@@ -55,7 +55,7 @@ h1{
     overflow: hidden;
     border-radius: 10px;
 }
-#badFame{
+#badFame, .bad_fame_percent{
     position: absolute;
     width: 0%;
     height: 100%;
@@ -89,4 +89,33 @@ h1{
 
 .hideStatus{
     left:-32.5%;
+}
+.report{
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    overflow: auto;
+    bottom: 40%;
+    border-radius: 20px;
+    left: 15%;
+    font-family: Alloy;
+    z-index: 2;
+    overflow-x: hidden;
+    border: 2px black;
+    font-size: 30px;
+    color: white;
+}
+.tableHead{
+    font-size: 35px;
+    text-align: center;
+
+}
+.endFameBar{
+    position: absolute;
+    width: 40%;
+    height: 5%;
+    background: green;
+    border-radius:20px;
+    bottom: 27.5%;
+    left: 30%;
 }
