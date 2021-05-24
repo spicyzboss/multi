@@ -61,7 +61,7 @@ let per_Sec = setInterval(()=>{
     else{
         bubble_recycle.dataset.state = "onHide";
     }
-}, 1);
+}, 1000);
 
 function sellProduct(){
     if(my_curent_Product >= 100){
