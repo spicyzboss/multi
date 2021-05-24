@@ -15,14 +15,14 @@ body, html {
 
 #game {
     position: fixed;
-    background-color: #6495ED;
+    background-color: transparent;
     color: white;
     font-weight: bold;
     right: 15px;
     bottom: 15px;
     border-radius: 20px;
     padding: 1% 2% 1% 2%;
-    border: none;
+    border: 2px solid white;
     transition: background-color 0.5s;
 }
 #game:hover {
@@ -87,7 +87,37 @@ body, html {
 #solve_reject,
 #solve_fish,
 #solve_text2,
+#col_epr_img1,
 #col_epr_img2,
+#col_epr_img2_2,
+#col_epr_img3,
+#col_epr_img4,
+#col_epr_img4_2,
+#col_epr_img5,
+#col_epr_img6,
+#epr_text1,
+#epr_head,
+#col_epr_text1,
+#col_epr_text2,
+#col_epr_text3,
+#col_epr_text4,
+#col_epr_text5,
+#col_epr_text6,
+#col1_epr_text1,
+#col1_epr_text2,
+#col1_epr_text3,
+#col1_epr_text4,
+#col1_epr_text5,
+#col1_epr_text6,
+#col1_epr_text7,
+#col1_epr_text8,
+#col1_epr_img1,
+#col1_epr_light_left1,
+#col1_epr_light_left2,
+#col1_epr_light_right1,
+#col1_epr_light_right2,
+#callout_button,
+#callout_text,
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -472,8 +502,158 @@ body, html {
 /* ——————————————————————— EPR ——————————————————————— */
 #col_epr_img2 {
     width: 37%;
-    margin-top: 432vw;
+    margin-top: 452vw;
     margin-left: 5vw;
+}
+#col_epr_img4 {
+    width: 37%;
+    margin-top: 462vw;
+    margin-left: 50vw;
+}
+#epr_text1 {
+    width: 37%;
+    margin-top: 454vw;
+    margin-left: 30vw;
+}
+#epr_head {
+    width: 37%;
+    margin-top: 482vw;
+    margin-left: 30vw;
+}
+#col_epr_text1 {
+    width: 27%;
+    margin-top: 528vw;
+    margin-left: 35vw;
+}
+#col_epr_text2 {
+    width: 50%;
+    margin-top: 570vw;
+    margin-left: 24vw;
+}
+#col_epr_img1 {
+    width: 45%;
+    margin-top: 574vw;
+    margin-left: 27vw;
+}
+#col_epr_img2_2 {
+    width: 45%;
+    margin-top: 590vw;
+    margin-left: 4vw;
+}
+#col_epr_text3 {
+    width: 60%;
+    margin-top: 620vw;
+    margin-left: 19vw;
+}
+#col_epr_img3 {
+    width: 40%;
+    margin-top: 626vw;
+    margin-left: 29vw;
+}
+#col_epr_img4_2 {
+    width: 40%;
+    margin-top: 656vw;
+    margin-left: 50vw;
+}
+#col_epr_text4 {
+    width: 45%;
+    margin-top: 676vw;
+    margin-left: 28vw;
+}
+#col_epr_text5 {
+    width: 45%;
+    margin-top: 692vw;
+    margin-left: 4vw;
+}
+#col_epr_img5 {
+    width: 30%;
+    margin-top: 687vw;
+    margin-left: 48vw;
+}
+#col_epr_img6 {
+    width: 30%;
+    margin-top: 723vw;
+    margin-left: 7vw;
+}
+#col_epr_text6 {
+    width: 70%;
+    margin-top: 729vw;
+    margin-left: 24vw;
+}
+#col1_epr_text1 {
+    width: 60%;
+    margin-top: 733vw;
+    margin-left: -5vw;
+}
+#col1_epr_img1 {
+    width: 20%;
+    margin-top: 753vw;
+    margin-left: 7vw;
+}
+#col1_epr_text2 {
+    width: 60%;
+    margin-top: 766vw;
+    margin-left: 16vw;
+}
+#col1_epr_text3 {
+    width: 60%;
+    margin-top: 780vw;
+    margin-left: 17vw;
+}
+#col1_epr_text4 {
+    width: 60%;
+    margin-top: 800vw;
+    margin-left: 17vw;
+}
+#col1_epr_text5 {
+    width: 60%;
+    margin-top: 830vw;
+    margin-left: 19vw;
+}
+#col1_epr_text6 {
+    width: 60%;
+    margin-top: 850vw;
+    margin-left: 19vw;
+}
+#col1_epr_text7 {
+    width: 60%;
+    margin-top: 860vw;
+    margin-left: 19vw;
+}
+#col1_epr_text8 {
+    width: 60%;
+    margin-top: 870vw;
+    margin-left: 20vw;
+}
+#callout_text {
+    width: 80%;
+    margin-top: 880vw;
+    margin-left: 10vw;
+}
+#callout_button {
+    width: 50%;
+    margin-top: 888vw;
+    margin-left: 24vw;
+}
+#col1_epr_light_right1 {
+    width: 50%;
+    margin-top: 750vw;
+    margin-left: 50vw;
+}
+#col1_epr_light_left1 {
+    width: 50%;
+    margin-top: 770vw;
+    margin-left: 0vw;
+}
+#col1_epr_light_right2 {
+    width: 50%;
+    margin-top: 870vw;
+    margin-left: 50vw;
+}
+#col1_epr_light_left2 {
+    width: 50%;
+    margin-top: 870vw;
+    margin-left: 0vw;
 }
 
 /* ——————————————————————— อย่าซนสิ ——————————————————————— */
