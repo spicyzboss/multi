@@ -113,12 +113,19 @@ body, html {
     margin-top: 161.2vw;
     width:8%;
 }
-#button_where1:hover, #button_where2:hover, #button_where3:hover {
+/* #button_where1:hover, #button_where2:hover, #button_where3:hover {
     animation: wipwub 0.5s linear infinite alternate;
 }
 @keyframes wipwub {
     0% {opacity: 100;}
     100% {opacity: 0;}
+} */
+#where_text1,
+#where_text2,
+#where_text3,
+#where_text4 {
+    transition: opacity 1s;
+    opacity: 0;
 }
 #where_text1 {
     width: 33%;

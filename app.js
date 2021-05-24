@@ -35,35 +35,64 @@ decision = () => {
         howmuch_content.src = `./img/howmuch_info3.png`
     }
 }
-var state_where1 = 1
-var state_where2 = 1
-var state_where3 = 1
-where1 = () => {
-    state_where1*=-1
-    if (state_where1 == 1) {
-        document.querySelector("#button_where1").src = `./img/button_where1.png`
-    } else {
-        document.querySelector("#button_where1").src = `./img/button2_where1.png`
-    }
-}
-where2 = () => {
-    state_where2*=-1
-    if (state_where2 == 1) {
-        document.querySelector("#button_where2").src = `./img/button_where2.png`
-    } else {
-        document.querySelector("#button_where2").src = `./img/button2_where2.png`
-    }
-}
-where3 = () => {
-    state_where3*=-1
-    if (state_where3 == 1) {
-        document.querySelector("#button_where3").src = `./img/button_where3.png`
-    } else {
-        document.querySelector("#button_where3").src = `./img/button2_where3.png`
-    }
+// var state_where1 = 1
+// var state_where2 = 1
+// var state_where3 = 1
+// where1 = () => {
+//     state_where1*=-1
+//     if (state_where1 == 1) {
+//         document.querySelector("#button_where1").src = `./img/button_where1.png`
+//     } else {
+//         document.querySelector("#button_where1").src = `./img/button2_where1.png`
+//     }
+// }
+// where2 = () => {
+//     state_where2*=-1
+//     if (state_where2 == 1) {
+//         document.querySelector("#button_where2").src = `./img/button_where2.png`
+//     } else {
+//         document.querySelector("#button_where2").src = `./img/button2_where2.png`
+//     }
+// }
+// where3 = () => {
+//     state_where3*=-1
+//     if (state_where3 == 1) {
+//         document.querySelector("#button_where3").src = `./img/button_where3.png`
+//     } else {
+//         document.querySelector("#button_where3").src = `./img/button2_where3.png`
+//     }
+// }
+
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    var html = document.documentElement;
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || html.clientHeight) &&
+        rect.right <= (window.innerWidth || html.clientWidth)
+    );
 }
 
 playGame = () => window.location.href = `game.html`
+
+window.addEventListener("mousewheel", () => {
+    if (isInViewport(document.querySelector("#button_where1"))) {
+        document.querySelector("#where_text1").style.opacity = 100;
+        document.querySelector("#button_where1").style.opacity = 0;
+        setInterval(() => {
+            document.querySelector("#where_text2").style.opacity = 100;
+        }, 500);
+    }
+    if (isInViewport(document.querySelector("#button_where2"))) {
+        document.querySelector("#where_text3").style.opacity = 100;
+        document.querySelector("#button_where2").style.opacity = 0;
+    }
+    if (isInViewport(document.querySelector("#button_where3"))) {
+        document.querySelector("#where_text4").style.opacity = 100;
+        document.querySelector("#button_where3").style.opacity = 0;
+    }
+})
 
 /**
  * Back to top button
