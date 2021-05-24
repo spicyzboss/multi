@@ -157,19 +157,22 @@
                 display: block;
                 background: #c2cf4d;
                 margin: auto;
-                margin-top: 3;
+                margin-top: 2.5%;
                 width: 20vw;
                 height: 10vh;
-                border-radius: 50px;
+                border-radius: 10px;
                 border: 0;
                 color: white;
+                font-family: GoodDog;
                 text-align: center;
                 font-size: 6vh;
                 cursor: pointer;
                 transform: translateY(-10px);
+
             }
             .buttStart:hover{
                 background: rgb(100, 99, 18);
+
             }
             h2{
                 text-align: center;
@@ -328,7 +331,8 @@
                 background: url(pic/notReady.png);
                 background-size: cover;
             }
-            #toWEB{
+            #toCampaign{
+                font-family: GoodDog;
                 position: absolute;
                 bottom: 5%;
                 right: 2.5%;
@@ -336,12 +340,14 @@
                 height: 37.5px;
                 border: none;
                 border-radius: 10px;
-                background: indianred;
+                background: rgba(0, 0, 0, 0.5);
                 z-index: 5;
                 cursor: pointer;
+                color:rgba(255, 255, 255, 0.5);
             }
-            #toWEB:hover{
-                background: rgb(202, 122, 122);
+            #toCampaign:hover{
+                background: rgb(46, 46, 46, 0.5);
+                color:rgba(255, 255, 255, 1);
 
             }
         </style>
@@ -354,11 +360,11 @@
                     Start
                 </button>
                 <button class="buttStart">
-                    Option
+                    Tip
                 </button>
         </div>
-        <a href="landing.html" target="_self"><button id="toWEB">
-            WEB
+        <a href="https://plastic-epr.netlify.app/" target="_blank"><button id="toCampaign">
+            Read Campaign
         </button>
         </a>
         <!-- map -->
