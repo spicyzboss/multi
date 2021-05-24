@@ -118,6 +118,8 @@ body, html {
 #col1_epr_light_right2,
 #callout_button,
 #callout_text,
+#effection_button1,
+#effection_button2,
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -373,7 +375,17 @@ body, html {
     margin-top: 275vw;
     margin-left: 28.3vw;
 }
-#btn_nature {
+#effection_button1 {
+    width: 20%;
+    margin-top: 288vw;
+    margin-left: 12vw;
+}
+#effection_button2 {
+    width: 20%;
+    margin-top: 288vw;
+    margin-left: 62vw;
+}
+/* #btn_nature {
     position: absolute;
     border: none;
     border-radius: 20px;
@@ -388,7 +400,6 @@ body, html {
 }
 #btn_nature:hover {
     background-color: rgb(209, 188, 149);
-    /* color: rgb(12, 221, 221); */
 }
 #btn_human {
     position: absolute;
@@ -405,7 +416,7 @@ body, html {
 }
 #btn_human:hover {
     background-color: rgb(123, 27, 27);
-}
+} */
 #effect_nature {
     width: 25%;
     margin-top: 289vw;
@@ -634,6 +645,9 @@ body, html {
     width: 50%;
     margin-top: 888vw;
     margin-left: 24vw;
+}
+#callout_button:hover {
+    content: url("./img/callout_botton1.png");
 }
 #col1_epr_light_right1 {
     width: 50%;
