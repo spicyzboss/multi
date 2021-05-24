@@ -34,6 +34,7 @@ body, html {
     display: none;
 }
 
+#pole,
 #water_middle,
 #quotes,
 #background,
@@ -75,6 +76,12 @@ body, html {
     width: 45%;
     margin-top: 80vw;
     margin-left: 28vw;
+}
+
+#pole {
+    width: 45%;
+    margin-top: 110vw;
+    margin-left: 29vw;
 }
 
 .hide {
