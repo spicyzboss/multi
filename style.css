@@ -9,6 +9,10 @@ body, html {
     z-index: 0;
 }
 
+.preload {
+    z-index: 9999;
+}
+
 #game {
     position: fixed;
     background-color: #6495ED;
@@ -26,15 +30,14 @@ body, html {
     color: wheat;
 }
 
-.preload {
-    z-index: 9999;
-}
 
 #arrow_left_preload, #arrow_right_preload {
     display: none;
 }
 
 #pole,
+#where_text1,
+#where_text2,
 #water_middle,
 #quotes,
 #background,
@@ -72,15 +75,15 @@ body, html {
     margin-top: 60vw;
 }
 
+/* Where */
 #head_where {
     width: 45%;
-    margin-top: 80vw;
+    margin-top: 90vw;
     margin-left: 28vw;
 }
-
 #pole {
     width: 45%;
-    margin-top: 110vw;
+    margin-top: 120vw;
     margin-left: 29vw;
 }
 .btn1,
@@ -93,24 +96,29 @@ body, html {
     margin-left: 46vw;
 }
 .btn1 {
-    margin-top: 110.75vw;
+    margin-top: 120.75vw;
     width:8%;
 }
 .btn2 {
-    margin-top: 126.9vw;
+    margin-top: 137.5vw;
     width:8%;
 }
 .btn3 {
-    margin-top: 145.2vw;
+    margin-top: 156.2vw;
     width:8%;
 }
 #button_where1:hover, #button_where2:hover, #button_where3:hover {
     opacity: 0;
 }
-
-.hide {
-    display: none;
-    pointer-events: none;
+#where_text1 {
+    width: 33%;
+    margin-top: 111vw;
+    margin-left: 9vw;
+}
+#where_text2 {
+    width: 23%;
+    margin-top: 125vw;
+    margin-left: 23vw;
 }
 
 #howmuch_info,
@@ -144,6 +152,10 @@ body, html {
 }
 
 /* ——————————————————————— อย่าซนสิ ——————————————————————— */
+.hide {
+    display: none;
+    pointer-events: none;
+}
 /* 
 * Preloader หมุนๆ แบบหล่อเท่
 */
