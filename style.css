@@ -78,15 +78,6 @@ body, html {
 #head,
 #waste1,
 #waste2,
-#head_solve,
-#solve_text1,
-#solve_reduce,
-#solve_reuse,
-#solve_repair,
-#solve_recycle,
-#solve_reject,
-#solve_fish,
-#solve_text2,
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -98,14 +89,15 @@ body, html {
 }
 #waste1 {
     margin-top: 25vw;
-    animation: up-down 2.5s linear infinite alternate;
+    animation: up-down 2.5s infinite ease-in-out;
 }
 #waste2 {
     width: 40%;
     margin-top: 60vw;
     margin-left: 46vw;
-    animation: up-down 3s linear 1s infinite alternate;
+    animation: up-down 4s infinite ease-in-out;
 }
+
 
 #quotes {
     width: 45%;
@@ -183,23 +175,27 @@ body, html {
 }
 #where_waste1 {
     width: 28%;
-    margin-top: 120vw;
+    margin-top: 115vw;
     margin-left: 56vw;
+    animation: up-down 2.5s infinite ease-in-out;
 }
 #where_waste2 {
     width: 32%;
     margin-top: 133vw;
     margin-left: 10vw;
+    animation: up-down 3s infinite ease-in-out;
 }
 #where_fish {
     width: 28%;
     margin-top: 150vw;
     margin-left: 61vw;
+    animation: up-down 4.5s infinite ease-in-out;
 }
 #where_bubble {
     width: 32%;
     margin-top: 149vw;
     margin-left: 59vw;
+    animation: up-down 4.5s infinite ease-in-out;
 }
 
 /* ——————————————————————— howmuch ——————————————————————— */
@@ -224,21 +220,25 @@ body, html {
     width: 10%;
     margin-top: 209vw;
     margin-left: 10vw;
+    animation: up-down-low 4.5s infinite ease-in-out;
 }
 #howmuch_virus2 {
     width: 8%;
     margin-top: 230vw;
     margin-left: 18vw;
+    animation: up-down-low 5.5s infinite ease-in-out;
 }
 #howmuch_virus3 {
     width: 13%;
     margin-top: 214vw;
     margin-left: 22vw;
+    animation: up-down-low 4s infinite ease-in-out;
 }
 #howmuch_virus4 {
     width: 11%;
     margin-top: 207vw;
     margin-left: 31vw;
+    animation: up-down-low 5s infinite ease-in-out;
 }
 #howmuch_garbage,
 #howmuch_garbage2,
@@ -248,18 +248,22 @@ body, html {
 #howmuch_bubble4,
 #howmuch_bubble5,
 #howmuch_thai,
+
 #howmuch_waste1 {
     opacity: 0;
     transition: opacity 1s;
 }
+
 #howmuch_thai {
     width: 55%;
     margin-top: 200vw;
 }
+
 #howmuch_waste1 {
     width: 20%;
     margin-top: 228vw;
     margin-left: 23vw;
+    animation: up-down-low 3.5s infinite ease-in-out;
 }
 #howmuch_garbage {
     width: 40%;
@@ -275,26 +279,31 @@ body, html {
     width: 10%;
     margin-top: 210vw;
     margin-left: 25vw;
+    animation: up-down-low 5.5s infinite ease-in-out;
 }
 #howmuch_bubble2 {
     width: 12%;
     margin-top: 214vw;
     margin-left: 10vw;
+    animation: up-down-low 6s infinite ease-in-out;
 }
 #howmuch_bubble3 {
     width: 9%;
     margin-top: 225vw;
     margin-left: 5vw;
+    animation: up-down-low 4.5s infinite ease-in-out;
 }
 #howmuch_bubble4 {
     width: 11%;
     margin-top: 220vw;
     margin-left: 24vw;
+    animation: up-down-low 5s infinite ease-in-out;
 }
 #howmuch_bubble5 {
     width: 9%;
     margin-top: 227vw;
     margin-left: 33vw;
+    animation: up-down-low 4s infinite ease-in-out;
 }
 #howmuch_text1,
 #howmuch_text2,
@@ -389,90 +398,41 @@ body, html {
     width: 33%;
     margin-top: 298vw;
     margin-left: 8vw;
-    opacity: 0;
     transition: opacity 1s;
+    opacity: 0;
 }
 #effect_text2 {
     width: 33%;
     margin-top: 297vw;
     margin-left: 58vw;
-    opacity: 0;
     transition: opacity 1s;
+    opacity: 0;
 }
 #effect_text3 {
     margin-top: 313vw;
-    opacity: 0;
     transition: opacity 2s;
+    opacity: 0;
 }
 #effect_text4 {
     margin-top: 328vw;
-    opacity: 0;
     transition: opacity 2s;
+    opacity: 0;
 }
 
-/* ——————————————————————— effect ——————————————————————— */
-#head_solve,
-#solve_text1,
-#solve_text2,
-#solve_reuse,
-#solve_reduce,
-#solve_recycle,
-#solve_repair,
-#solve_reject {
-    opacity: 0;
-    transition: opacity 1s;
-}
-#head_solve {
-    width: 35%;
-    margin-top: 370vw;
-    margin-left: 5vw;
-}
-#solve_text1 {
-    width: 28%;
-    margin-top: 378vw;
-    margin-left: 27vw;
-}
-#solve_reduce {
-    width: 24%;
-    margin-top: 391vw;
-    margin-left: 21vw;
-}
-#solve_reuse {
-    width: 23%;
-    margin-top: 392vw;
-    margin-left: 37vw;
-}
-#solve_repair {
-    width: 23%;
-    margin-top: 382vw;
-    margin-left: 48vw;
-}
-#solve_recycle {
-    width: 23%;
-    margin-top: 400vw;
-    margin-left: 53vw;
-}
-#solve_reject {
-    width: 23%;
-    margin-top: 407vw;
-    margin-left: 38vw;
-}
-#solve_fish {
-    width: 37%;
-    margin-top: 412vw;
-    margin-left: 60vw;
-}
-#solve_text2 {
-    width: 37%;
-    margin-top: 412vw;
-    margin-left: 5vw;
-}
 
 /* ——————————————————————— อย่าซนสิ ——————————————————————— */
 @keyframes up-down {
-    0% {transform: translateY(0)}
+    0% {transform: translateY(40px)}
+    50% {transform: translateY(0px)}
     100% {transform: translateY(40px)}
 }
+
+@keyframes up-down-low {
+    0% {transform: translateY(10px)}
+    50% {transform: translateY(0px)}
+    100% {transform: translateY(10px)}
+}
+
 
 .hide {
     display: none;
