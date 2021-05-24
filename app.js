@@ -1,15 +1,15 @@
-const preload = document.querySelector(".preload")
-const loaded = document.querySelector(".loaded")
-loaded.classList.add("hide")
+// const preload = document.querySelector(".preload")
+// const loaded = document.querySelector(".loaded")
+// loaded.classList.add("hide")
 document.querySelector("html").style.overflowY = `hidden`
 var arrow_state = 1
 const arrow_left = document.querySelector("#arrow_left")
 const arrow_right = document.querySelector("#arrow_right")
-window.addEventListener("load", () => {
-    preload.classList.add("hide")
-    loaded.classList.remove("hide")
-    document.querySelector("html").style.overflowY = `auto`
-})
+// window.addEventListener("load", () => {
+//     preload.classList.add("hide")
+//     loaded.classList.remove("hide")
+// })
+document.querySelector("html").style.overflowY = `auto`
 left_arrow = () => {
     arrow_state--;
     if (arrow_state < 1) {

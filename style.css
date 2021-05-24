@@ -421,14 +421,14 @@ body, html {
     margin-top: 298vw;
     margin-left: 8vw;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.2s;
 }
 #effect_text2 {
     width: 33%;
     margin-top: 297vw;
     margin-left: 58vw;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.2s;
 }
 #effect_text3 {
     margin-top: 313vw;
