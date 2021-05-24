@@ -332,10 +332,11 @@
                 background-size: cover;
             }
             #toCampaign{
+                font-family: GoodDog;
                 position: absolute;
                 bottom: 5%;
                 right: 2.5%;
-                width: 125px;
+                width: 75px;
                 height: 37.5px;
                 border: none;
                 border-radius: 10px;
@@ -349,6 +350,33 @@
                 color:rgba(255, 255, 255, 1);
 
             }
+            #summary{
+                position: absolute;
+                width: 35vw;
+                height: 50vh;
+                background: gold;
+                border-radius: 10px;
+                z-index: 10;
+                transition: 0.5s;
+            }
+            #summary[data-state="off"]{
+                bottom: 0;
+                left: -35%;
+            }
+            #summary[data-state="on"]{
+                bottom: 0;
+                left: 0;
+            }
+            #tip-pic{
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                background: url("pic/tip.png");
+                background-size: 100% 100%;
+                top: 5%;
+                left: 5%
+
+            }
         </style>
     </head>
     <body>
@@ -358,11 +386,11 @@
                 <button class="buttStart" onclick="gameStart()">
                     Start
                 </button>
-                <button class="buttStart">
+                <button class="buttStart" onclick="openTip()">
                     Tip
                 </button>
         </div>
-        <a href="landing.html" target="_self"><button id="toCampaign">
+        <a href="landing.html" target="_blank"><button id="toCampaign">
             Read Campaign
         </button>
         </a>
@@ -616,6 +644,8 @@
         <div id="Edit" class="WindowCanvas"></div>
         <div id="EventShowUp" data-state="off" class="WindowCanvas"></div>
         <div id="Ending" data-state="off" class="WindowCanvas"><div class="black"></div><div id="EndText"></div></div>
+        <div id="TIP" data-state="off" class="WindowCanvas" style="background:gold"><div id="closeTip" style="z-index: 10;"onclick="TIP.dataset.state=`off`"></div><div id="tip-pic"></div></div>
+        </div>
         <div id="RecZone" class="recStyle hideStatus">
             <div id="titleRec">
                 <h1>Status</h1>
@@ -785,6 +815,9 @@
                 countBuilding();
             }
         }
+        function openTip(){
+            TIP.dataset.state="on";
+        }
         function timeStart() {
             let days =  1;
             let min = [0, 0];
@@ -837,3 +870,4 @@
         </script>
     </body>
 </html>
+
