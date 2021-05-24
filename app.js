@@ -39,28 +39,28 @@ var state_where1 = 1
 var state_where2 = 1
 var state_where3 = 1
 where1 = () => {
+    state_where1*=-1
     if (state_where1 == 1) {
         document.querySelector("#button_where1").src = `./img/button_where1.png`
     } else {
         document.querySelector("#button_where1").src = `./img/button2_where1.png`
     }
-    state_where1*=-1
 }
 where2 = () => {
+    state_where2*=-1
     if (state_where2 == 1) {
         document.querySelector("#button_where2").src = `./img/button_where2.png`
     } else {
         document.querySelector("#button_where2").src = `./img/button2_where2.png`
     }
-    state_where2*=-1
 }
 where3 = () => {
+    state_where3*=-1
     if (state_where3 == 1) {
         document.querySelector("#button_where3").src = `./img/button_where3.png`
     } else {
         document.querySelector("#button_where3").src = `./img/button2_where3.png`
     }
-    state_where3*=-1
 }
 
 playGame = () => window.location.href = `game.html`
