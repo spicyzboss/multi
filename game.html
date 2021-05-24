@@ -273,6 +273,10 @@
                 background: red;
 
             }
+            .bubble:hover{
+                transform: scale(1.2);
+                transform-origin: center;
+            }
             .bubble[data-state="onHide"]{
                 z-index: -5;
             }
@@ -283,6 +287,12 @@
             .bubble[data-for="activate_recycle"]{
                 background: url(pic/bub.png);
                 background-size: cover;
+            }
+            .bubble[data-for="openEdit"]{
+                background: url(pic/bub_edit.png);
+                background-size: cover;
+                right: 1%;
+                top: 20%;
             }
             .bubble[data-for="sell_product_ready"]{
                 right: 1%;
@@ -608,6 +618,7 @@
         </div>
         <button id="bubble_recycle" data-for="activate_recycle" class="bubble" data-state="onShow" onclick="RecycleActivate()"></button>
         <button id="bubble_sell_product" data-for="sell_product_notReady"class="bubble" data-state="onShow" onclick="sellProduct()"></button>
+        <button id="bubble_Edit" data-for="openEdit"class="bubble" data-state="onShow" onclick="Editting()"></button>
         <div class="backstage"></div>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/el/fac.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/el/fac2.js"></SCRIPT>
@@ -700,14 +711,7 @@
 
                     Op.classList.remove("visible");
                     buildBar.dataset.state = `off`;
-                    if(target2 === Fac || target === Fac){
-                        nowSelect = target2;
-                        Op.classList.add("visible");
-                        Op.innerHTML = `<button id="editButt" class="butt" onclick="Editting()">Package</button>
-            <button id="Butt" class="butt">Edit</button>
-            `
-                    }
-                    else if(target === land1 || target2 === land1){
+                    if(target === land1 || target2 === land1){
                         if(target === land1){
                             nowSelect = target;
                         }
@@ -786,7 +790,8 @@
                         hour[1] = 8;
                         hour[0] = 0;
                         days++;
-                        event = Math.floor((Math.random()*(21-12))+12)
+                        event = Math.floor((Math.random()*(21-12))+12);
+                        per_day = `Ready`
                         console.log(eventTime);
                     }
                     else{
@@ -810,6 +815,7 @@
             });
             if(100 - Math.round(bad_fame*100/my_curent_Fame) >= 50 && 100 - Math.round(bad_fame*100/my_curent_Fame) <= 60){
             }
+
 
 
         }
