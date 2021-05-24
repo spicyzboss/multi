@@ -57,9 +57,9 @@ body, html {
     animation: up-down 2.5s linear infinite alternate;
 }
 #waste2 {
-    width: 50%;
+    width: 40%;
     margin-top: 60vw;
-    margin-left: 50vw;
+    margin-left: 46vw;
     animation: up-down 3s linear 1s infinite alternate;
 }
 
