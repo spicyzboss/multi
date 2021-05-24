@@ -54,6 +54,9 @@ body, html {
     margin-top: 84vw;
 }
 
+#water_top {
+    margin-top: 25vw;
+}
 #waste1 {
     animation: up-down 2.5s linear infinite alternate;
 }
