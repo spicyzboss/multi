@@ -9,6 +9,22 @@ body, html {
     z-index: 0;
 }
 
+#game {
+    position: fixed;
+    background-color: #6495ED;
+    color: white;
+    font-weight: bold;
+    right: 15px;
+    bottom: 70px;
+    border-radius: 20px;
+    padding: 1% 2% 1% 2%;
+    transition: background-color 0.5s;
+}
+#game:hover {
+    background-color: #4c6188;
+    color: wheat;
+}
+
 .preload {
     z-index: 9999;
 }

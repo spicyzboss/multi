@@ -36,6 +36,8 @@ decision = () => {
     }
 }
 
+playGame = () => window.location.href = `game.html`
+
 /**
  * Back to top button
  */
