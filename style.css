@@ -38,6 +38,7 @@ body, html {
 #pole,
 #where_text1,
 #where_text2,
+#where_waste1,
 #water_middle,
 #quotes,
 #background,
@@ -119,6 +120,11 @@ body, html {
     width: 23%;
     margin-top: 125vw;
     margin-left: 23vw;
+}
+#where_waste1 {
+    width: 28%;
+    margin-top: 120vw;
+    margin-left: 56vw;
 }
 
 #howmuch_info,
