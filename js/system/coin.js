@@ -24,8 +24,8 @@ let per_Sec = setInterval(()=>{
         my_curent_Returned += returnPackage_inuse*return_package_per_sec;
     }
     my_curent_Fame += (fame_per_sec_package+fame_per_sec_building)*produce_state;
-    my_curent_Product += (2+2*fac2_inuse)*produce_state;
-    produced += (2+2*fac2_inuse)*produce_state;
+    my_curent_Product += (4+2*fac2_inuse)*produce_state;
+    produced += (4+2*fac2_inuse)*produce_state;
     bad_fame += bad_fame_per_sec_package+bad_fame_per_sec_building;
     myCoin.innerHTML = Math.round(my_curent_Coin);
     myFame.innerHTML = Math.round(my_curent_Fame*100)/100;
