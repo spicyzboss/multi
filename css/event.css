@@ -44,7 +44,7 @@
     z-index: 10;
     margin: auto;
 }
-.ToLanding{
+.ButtPush{
     position: absolute;
     width: 15%;
     height: 10%;
@@ -60,7 +60,7 @@
     box-shadow:5px 5px rgb(8, 8, 77);
 
 }
-.ToLanding:hover{
+.ButtPush:hover{
     transform: translateY(4px);
     box-shadow:1px 1px rgb(8, 8, 77);
 
