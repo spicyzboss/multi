@@ -44,14 +44,24 @@ body, html {
 #where_waste2,
 #where_fish,
 #where_bubble,
+#howmuch_head,
+#howmuch_thai,
+#howmuch_waste1,
+#howmuch_text1,
+#howmuch_text2,
+#howmuch_text3,
+#head_effect,
+#effect_nature,
+#effect_human,
+#effect_text1,
+#effect_text2,
+#effect_text3,
+#effect_text4,
 #water_middle,
+#water_middle2,
 #quotes,
 #background,
-#arrow_left,
-#arrow_right,
 #head_where,
-#howmuch_head,
-#howmuch_info,
 #water_top,
 #head,
 #waste1,
@@ -82,6 +92,9 @@ body, html {
 }
 
 /* ——————————————————————— Where ——————————————————————— */
+#water_middle2 {
+    opacity: 50%;
+}
 #head_where {
     width: 45%;
     margin-top: 90vw;
@@ -168,37 +181,108 @@ body, html {
     margin-left: 59vw;
 }
 
-#howmuch_info,
+/* ——————————————————————— howmuch ——————————————————————— */
 #howmuch_head {
-    width: 40%;
-    margin-top: 92vw;
-    margin-left: 4vw;
+    width: 34%;
+    margin-top: 215vw;
+    margin-left: 53vw;
 }
-
-#arrow_left, #arrow_right {
-    width: 15%;
-    margin-top: 100vw;
-    cursor: pointer;
+#howmuch_thai {
+    width: 55%;
+    margin-top: 200vw;
 }
-#arrow_left {
-    margin-left: -4vw;
+#howmuch_waste1 {
+    width: 20%;
+    margin-top: 228vw;
+    margin-left: 23vw;
 }
-#arrow_left:hover {
-    content: url(./img/arrow_left2.png);
+#howmuch_text1,
+#howmuch_text2,
+#howmuch_text3 {
+    transition: opacity 1s;
+    opacity: 0;
 }
+#howmuch_text1 {
+    opacity: 100;
+}
+#howmuch_text1,
+#howmuch_text2 {
+    width: 36%;
+    margin-top: 223vw;
+    margin-left: 51vw;
+}
+#howmuch_text3 {
+    width: 36%;
+    margin-top: 224vw;
+    margin-left: 51vw;
+}
+#arrow_left2,
+#arrow_right2 {
+    opacity: 0;
+}
+#arrow_left,
+#arrow_left2,
+#arrow_right2,
 #arrow_right {
-    margin-left: 35vw;
+    position: absolute;
+    width: 6%;
+    margin-top: 231.5vw;
+    cursor: pointer;
+    transition: opacity 1s;
 }
-#arrow_right:hover {
-    content: url(./img/arrow_right2.png);
+#arrow_left2,
+#arrow_left {
+    margin-left: 45vw;
+}
+#arrow_right:hover,
+#arrow_left:hover {
+    opacity: 0;
+}
+#arrow_right2,
+#arrow_right {
+    margin-left: 87vw;
 }
 
+/* ——————————————————————— effect ——————————————————————— */
+#head_effect {
+    width: 40%;
+    margin-top: 180vw;
+    margin-left: 28.3vw;
+}
+#effect_nature {
+    width: 25%;
+    margin-top: 189vw;
+    margin-left: 12vw;
+}
+#effect_human {
+    width: 26%;
+    margin-top: 188.1vw;
+    margin-left: 60vw;
+}
+#effect_text1 {
+    width: 33%;
+    margin-top: 198vw;
+    margin-left: 8vw;
+}
+#effect_text2 {
+    width: 33%;
+    margin-top: 197vw;
+    margin-left: 58vw;
+}
+#effect_text3 {
+    margin-top: 213vw;
+}
+#effect_text4 {
+    margin-top: 228vw;
+}
+
+
+/* ——————————————————————— อย่าซนสิ ——————————————————————— */
 @keyframes up-down {
     0% {transform: translateY(0)}
     100% {transform: translateY(40px)}
 }
 
-/* ——————————————————————— อย่าซนสิ ——————————————————————— */
 .hide {
     display: none;
     pointer-events: none;

@@ -3,7 +3,6 @@ const loaded = document.querySelector(".loaded")
 loaded.classList.add("hide")
 document.querySelector("html").style.overflowY = `hidden`
 var arrow_state = 1
-const howmuch_content = document.querySelector("#howmuch_info")
 const arrow_left = document.querySelector("#arrow_left")
 const arrow_right = document.querySelector("#arrow_right")
 window.addEventListener("load", () => {
@@ -25,43 +24,25 @@ right_arrow = () => {
     }
     decision()
 }
+howmuch_text1 = document.querySelector("#howmuch_text1")
+howmuch_text2 = document.querySelector("#howmuch_text2")
+howmuch_text3 = document.querySelector("#howmuch_text3")
 decision = () => {
     console.log(arrow_state)
     if (arrow_state == 1) {
-        howmuch_content.src = `./img/howmuch_info1.png`
+        howmuch_text1.style.opacity = 100
+        howmuch_text2.style.opacity = 0
+        howmuch_text3.style.opacity = 0
     } else if (arrow_state == 2) {
-        howmuch_content.src = `./img/howmuch_info2.png`
+        howmuch_text1.style.opacity = 0
+        howmuch_text2.style.opacity = 100
+        howmuch_text3.style.opacity = 0
     } else if (arrow_state == 3) {
-        howmuch_content.src = `./img/howmuch_info3.png`
+        howmuch_text1.style.opacity = 0
+        howmuch_text2.style.opacity = 0
+        howmuch_text3.style.opacity = 100
     }
 }
-// var state_where1 = 1
-// var state_where2 = 1
-// var state_where3 = 1
-// where1 = () => {
-//     state_where1*=-1
-//     if (state_where1 == 1) {
-//         document.querySelector("#button_where1").src = `./img/button_where1.png`
-//     } else {
-//         document.querySelector("#button_where1").src = `./img/button2_where1.png`
-//     }
-// }
-// where2 = () => {
-//     state_where2*=-1
-//     if (state_where2 == 1) {
-//         document.querySelector("#button_where2").src = `./img/button_where2.png`
-//     } else {
-//         document.querySelector("#button_where2").src = `./img/button2_where2.png`
-//     }
-// }
-// where3 = () => {
-//     state_where3*=-1
-//     if (state_where3 == 1) {
-//         document.querySelector("#button_where3").src = `./img/button_where3.png`
-//     } else {
-//         document.querySelector("#button_where3").src = `./img/button2_where3.png`
-//     }
-// }
 
 function isInViewport(element) {
     var rect = element.getBoundingClientRect();
