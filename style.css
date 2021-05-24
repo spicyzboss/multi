@@ -49,19 +49,21 @@ body, html {
     width: 100%;
 }
 
-#quotes {
-    width: 45%;
-    margin-top: 84vw;
-}
-
 #water_top {
     margin-top: 25vw;
 }
 #waste1 {
+    margin-top: -19vw;
     animation: up-down 2.5s linear infinite alternate;
 }
 #waste2 {
-    animation: up-down 2.5s linear 1s infinite alternate;
+    margin-top: -19vw;
+    animation: up-down 3s linear 1s infinite alternate;
+}
+
+#quotes {
+    width: 45%;
+    margin-top: 60vw;
 }
 
 .hide {
