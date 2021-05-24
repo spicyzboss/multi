@@ -34,6 +34,7 @@ body, html {
     display: none;
 }
 
+#quotes,
 #background,
 #arrow_left,
 #arrow_right,
@@ -42,13 +43,22 @@ body, html {
 #water_top,
 #head,
 #waste1,
+#waste2,
 #plastic_top {
     position: absolute;
     width: 100%;
 }
 
+#quotes {
+    width: 45%;
+    margin-top: 84vw;
+}
+
 #waste1 {
     animation: up-down 2.5s linear infinite alternate;
+}
+#waste2 {
+    animation: up-down 2.5s linear 1s infinite alternate;
 }
 
 .hide {
