@@ -220,14 +220,21 @@
             #buildBar{
                 position:absolute;
                 border-radius: 10px;
-                bottom: 0;
                 right: 0;
                 width: 65vw;
                 height: 25vh;
-                z-index: -1;
                 overflow: hidden;
                 background: rgb(252, 217, 19);
+                transition: 0.5s;
             }
+            #buildBar[data-state="off"]{
+                bottom: -25%;
+            }
+            #buildBar[data-state="on"]{
+                bottom: 0%;
+
+            }
+            
             .buildOP{
                 position: absolute;
                 width: 25%;
@@ -299,6 +306,7 @@
                 border-radius: 10px;
                 background: indianred;
                 z-index: 5;
+                cursor: pointer;
             }
             #toWEB:hover{
                 background: rgb(202, 122, 122);
@@ -683,7 +691,6 @@
                 /* buidingSelection*/
 
                 window.addEventListener("click", (e)=>{
-                    const NowDem = document.querySelectorAll(".now-req");
                     let target = e.target.parentElement.parentElement;
                     let target2 = target.parentElement;
                     console.log(target);
@@ -692,7 +699,7 @@
                     Op.style.left = e.pageX + "px";
 
                     Op.classList.remove("visible");
-                    buildBar.classList.remove("visible");
+                    buildBar.dataset.state = `off`;
                     if(target2 === Fac || target === Fac){
                         nowSelect = target2;
                         Op.classList.add("visible");
@@ -707,7 +714,7 @@
                         else{
                             nowSelect = target2;
                         }
-                        buildBar.classList.add("visible");
+                        buildBar.dataset.state = `on`;
                     }
                     else if(target === land2 || target2 === land2){
                         if(target === land2){
@@ -716,7 +723,7 @@
                         else{
                             nowSelect = target2;
                         }
-                        buildBar.classList.add("visible");
+                        buildBar.dataset.state = `on`;
                     }
                     else if(target === land3 || target2 === land3){
                         if(target === land3){
@@ -725,33 +732,11 @@
                         else{
                             nowSelect = target2;
                         }
-                        buildBar.classList.add("visible");
+                        buildBar.dataset.state = `on`;
                     }
-                    else{
-                        NowDem.forEach((el)=> {
-                            if(e.target === el){
-                                console.log(el);
-                                DemToRec(el);
-                            }
-                        })
-                    }
-                });
 
-            function DemToRec(el){
-                var item = `meat`;
-                        var preCost = 100;
-                        var cost = preCost;
-                        var account = [`<tr>You bought the ${item} ${cost}</tr>`,
-                                    `<tr>You bought the ${item} 40000</tr>`,
-                                    `<tr>You bought the ${item} 20000</tr>`,
-                                    `<tr>You bought the ${item} 50000</tr>`]
-                        rec.insertAdjacentHTML("beforeend", account[(el.dataset.no)-1]);
-                        if (RecZone.scrollTop < RecZone.scrollHeight - RecZone.clientHeight)
-                            RecZone.scrollTop += 100; // move down
-                            console.log(el);
-                el.classList.remove("now-req");
+                });
             }
-        }
 
         function build(el, building, type) {
             var cost = {
@@ -812,12 +797,20 @@
                 showTime.innerHTML = `${hour[0]}${hour[1]}:${min[0]}${min[1]}`;
                 showDay.innerHTML = days;
 
-            }, 25);
+            }, 125);
         }
         function EndGame(){
+            clearInterval(per_Sec);
             Ending.classList.add("visible");
             Ending.style.top = 0;
             Ending.style.left = 0;
+            let allWin = document.querySelectorAll(".WindowCanvas");
+            allWin.forEach((el)=>{
+                el.dataset.state= "off";
+            });
+            if(100 - Math.round(bad_fame*100/my_curent_Fame) >= 50 && 100 - Math.round(bad_fame*100/my_curent_Fame) <= 60){
+            }
+
 
         }
         function check(){

@@ -29,15 +29,14 @@ let EnvelonmentConcern = `<p class="quiz">  Right now, there is a lot of plastic
 var all_event = [AirPolution, ProductProblem, EnvelonmentConcern];
 
 function eventCall(){
-    // let get_event = Math.floor(Math.random()*all_event.length);
-    // EventShowUp.dataset.state = `on`;
-    // EventShowUp.innerHTML = all_event[get_event];
+    let get_event = Math.floor(Math.random()*all_event.length);
     EventShowUp.dataset.state = `on`;
-    EventShowUp.innerHTML = AirPolution;
+    EventShowUp.innerHTML = all_event[get_event];
+
 }
 
 function Answer(chose, question){
-    all_event.splice(question, 1);
+    all_event.splice(all_event.indexOf(question), 1);
     if(question === AirPolution)
         result_Polution(chose);
     else if(question === ProductProblem)
@@ -53,11 +52,11 @@ function result_Polution(chose){
     </p>
     `, `<p class="quiz">The accident happened while you and the employee were working. Your company must be closed for repair for a while(10s)
     </p>
-    `, `<p class="quiz">nothing happen.<br>Good luck.</p>
+    `, `<p class="quiz">nothing happen.Good luck.</p>
     ` 
 ];
     if(chose != 3){
-        EventShowUp.innerHTML = reply[chose]+`<div data-situation="Product" class="ImgEvent"></div>`;
+        EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Polution" class="ImgEvent"></div>`;
     }
     if(chose === 1){
         produce_state = 0;
@@ -75,19 +74,75 @@ function result_Polution(chose){
     else if(chose === 3){
         let chance = Math.floor(Math.random()*2);
         if(chance === 1){
-            EventShowUp.innerHTML =  reply[2]+`<div data-situation="Product" class="ImgEvent"></div>`;
+            EventShowUp.innerHTML =  reply[2]+`<div data-situation="Polution" class="ImgEvent"></div>`;
         produce_state = 0;
         setTimeout(()=>{
             produce_state = 1;
         }, 15000);
         }
         else{
-            EventShowUp.innerHTML =  reply[3]+`<div data-situation="Product" class="ImgEvent"></div>`;
+            EventShowUp.innerHTML =  reply[3]+`<div data-situation="Polution" class="ImgEvent"></div>`;
         }
         
     }
     setTimeout(()=>{
         EventShowUp.dataset.state = `off`;
-    }, 3000);
+    }, 1000);
+
+}
+
+function result_Product(chose){
+    let reply = [`<p class="quiz">Lose 1000 coins, but will receive praise from the townspeople with a 5% increase in reputation. 
+    </p>
+    `, `<p class="quiz">Your costumer give you the bad comment, So you received a bad response from the townspeople with 7.5%
+    </p>
+    `, `<p class="quiz">Wasted  500 coins, but the response of the townspeople wasn't too bad, get bad reputation 5%
+    </p>
+    `];
+    EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Product" class="ImgEvent"></div>`;
+    if(chose === 1){
+        my_curent_Coin -= 1000
+        my_curent_Fame += (my_curent_Fame-bad_fame)*5/100;
+    }
+    else if(chose === 2){
+        my_curent_Fame += bad_fame*7.5/100;
+        bad_fame += bad_fame*7.5/100
+    }
+    else if(chose === 3){
+        my_curent_Coin -= 500
+        my_curent_Fame += bad_fame*5/100;
+        bad_fame += bad_fame*7.5/100
+    }
+    setTimeout(()=>{
+        EventShowUp.dataset.state = `off`;
+    }, 1000);
+
+}
+function result_Env(chose){
+    let reply = [`<p class="quiz">Coins do not increase over a period of time but received a positive response from the townspeople with a 6.5% increase in reputation</p>
+    `, `<p class="quiz">Wasted 500 coin, but the townspeople's response was great, with an 8% increase in reputation</p>
+    `, `<p class="quiz">Wasted $ 450, but the response of the townspeople was not very good, with a 5.5% drop in reputation</p>
+    `];
+    EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Envelonment" class="ImgEvent"></div>`;
+    if(chose === 1){
+        produce_state = 0;
+        setTimeout(()=>{
+            produce_state = 1;
+        }, 10000);
+        my_curent_Fame += (my_curent_Fame-bad_fame)*6/100;
+    }
+    else if(chose === 2){
+        my_curent_Coin -= 500
+        my_curent_Fame += (my_curent_Fame-bad_fame)*8/100;
+
+    }
+    else if(chose === 3){
+        my_curent_Coin -= 450
+        my_curent_Fame += bad_fame*5.5/100;
+        bad_fame += bad_fame*5.5/100
+    }
+    setTimeout(()=>{
+        EventShowUp.dataset.state = `off`;
+    }, 1000);
 
 }
