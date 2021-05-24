@@ -152,3 +152,54 @@ function result_Env(chose){
     }, 1000);
 
 }
+function EndGame(){
+    clearInterval(per_Sec);
+    Ending.classList.add("visible");
+    Ending.style.top = 0;
+    Ending.style.left = 0;
+
+    let allWin = document.querySelectorAll(".WindowCanvas");
+    allWin.forEach((el)=>{
+        el.dataset.state= "off";
+    });
+
+    if(good_fame_percent >= 50 && good_fame_percent <= 60){
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader">Balance is everythings</h1>
+        <p class="Ending-text">Congratulations on your action,
+             make your company go smoothly without any loss. Plus you help the environment Not to be destroyed much</p></div>
+             <table class="report"><tr><td class="tableHead">Your Responsibility</td><tr>
+                <tr><td>Produced</td><td id="Total_produced" class="right-side"></td></tr>
+                <tr><td>Returned</td><td id="Total_returned" class="right-side"></td></tr>
+                <tr><td>Recycle</td><td id="Total_recycle" class="right-side"></td></tr>
+                <div class="endFameBar" style="height: 2.5%;"><div class="bad_fame_percent" id="redEnd"></div></div>`;
+    }
+    else if(good_fame_percent >= 0 && good_fame_percent < 50){
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader"> You're good at business</h1>
+        <p class="Ending-text">Congratulations from your actions making you rich.
+             Have a good business with additional income But you destroy the surrounding environment Causing environmental pollution Living things die</p></div>
+             <table class="report"><tr><td class="tableHead">Your Responsibility</td><tr>
+                <tr><td>Produced</td><td id="Total_produced" class="right-side"></td></tr>
+                <tr><td>Returned</td><td id="Total_returned" class="right-side"></td></tr>
+                <tr><td>Recycle</td><td id="Total_recycle" class="right-side"></td></tr>
+                <div class="endFameBar" style="height: 2.5%;"><div class="bad_fame_percent" id="redEnd"></div></div>
+             `;
+
+    }
+    else{
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader">For the world!!, good bye my money </h1>
+        <p class="Ending-text">Congratulations on your actions that make the environment better.
+             You have done what the operator should do. But you lost some amount</p></div>
+             <table class="report"><tr><td class="tableHead">Your Responsibility</td><tr>
+                <tr><td>Produced</td><td id="Total_produced" class="right-side"></td></tr>
+                <tr><td>Returned</td><td id="Total_returned" class="right-side"></td></tr>
+                <tr><td>Recycle</td><td id="Total_recycle" class="right-side"></td></tr>
+                <div class="endFameBar" style="height: 2.5%;"><div class="bad_fame_percent" id="redEnd"></div></div>`;
+    }
+    Total_produced.innerHTML = produced;
+    Total_returned.innerHTML = all_returned;
+    Total_recycle.innerHTML = all_returned - my_curent_Returned;
+    redEnd.style.width = bad_fame_percent;
+}

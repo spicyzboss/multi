@@ -28,7 +28,9 @@ console.log(`returnPackage: `+returnPackage_inuse);
 console.log(`recycle: `+recycle_inuse);
 }
 function RecycleActivate(){
+    if(my_curent_Returned> 100){
     my_curent_Returned -= 100;
     my_curent_Product += 50;
     my_curent_Fame+= 10;
+    }
 }
