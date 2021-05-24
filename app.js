@@ -110,6 +110,14 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || html.clientWidth)
     );
 }
+btn_nature = document.querySelector("#btn_nature")
+btn_human = document.querySelector("#btn_human")
+nature = () => {
+    document.querySelector("#effect_text1").style.opacity = 100
+}
+human = () => {
+    document.querySelector("#effect_text2").style.opacity = 100
+}
 
 playGame = () => window.location.href = `index.html`
 
@@ -128,6 +136,12 @@ window.addEventListener("mousewheel", () => {
     if (isInViewport(document.querySelector("#button_where3"))) {
         document.querySelector("#where_text4").style.opacity = 100;
         document.querySelector("#button_where3").style.opacity = 0;
+    }
+    if (isInViewport(document.querySelector("#effect_text3"))) {
+        document.querySelector("#effect_text3").style.opacity = 100;
+    }
+    if (isInViewport(document.querySelector("#effect_text4"))) {
+        document.querySelector("#effect_text4").style.opacity = 100;
     }
 })
 

@@ -330,34 +330,75 @@ body, html {
 /* ——————————————————————— effect ——————————————————————— */
 #head_effect {
     width: 40%;
-    margin-top: 180vw;
+    margin-top: 275vw;
     margin-left: 28.3vw;
+}
+#btn_nature {
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: wheat;
+    color: darkcyan;
+    font-weight: bold;
+    width: 25%;
+    margin-top: 298vw;
+    margin-left: 12vw;
+    cursor: pointer;
+}
+#btn_nature:hover {
+    background-color: rgb(209, 188, 149);
+    /* color: rgb(12, 221, 221); */
+}
+#btn_human {
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    width: 25%;
+    margin-top: 298vw;
+    margin-left: 62vw;
+    cursor: pointer;
+}
+#btn_human:hover {
+    background-color: rgb(123, 27, 27);
 }
 #effect_nature {
     width: 25%;
-    margin-top: 189vw;
+    margin-top: 289vw;
     margin-left: 12vw;
 }
 #effect_human {
     width: 26%;
-    margin-top: 188.1vw;
+    margin-top: 288.1vw;
     margin-left: 60vw;
 }
 #effect_text1 {
     width: 33%;
-    margin-top: 198vw;
+    margin-top: 298vw;
     margin-left: 8vw;
+    transition: opacity 1s;
+    opacity: 0;
 }
 #effect_text2 {
     width: 33%;
-    margin-top: 197vw;
+    margin-top: 297vw;
     margin-left: 58vw;
+    transition: opacity 1s;
+    opacity: 0;
 }
 #effect_text3 {
-    margin-top: 213vw;
+    margin-top: 313vw;
+    transition: opacity 2s;
+    opacity: 0;
 }
 #effect_text4 {
-    margin-top: 228vw;
+    margin-top: 328vw;
+    transition: opacity 2s;
+    opacity: 0;
 }
 
 
