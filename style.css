@@ -90,17 +90,19 @@ body, html {
     transition: opacity 0.5s;
     cursor: pointer;
     width: 16%;
-    margin-left: 42.2vw;
+    margin-left: 46vw;
 }
 .btn1 {
-    margin-top: 107vw;
-    
+    margin-top: 110.75vw;
+    width:8%;
 }
 .btn2 {
-    margin-top: 123vw;
+    margin-top: 126.9vw;
+    width:8%;
 }
 .btn3 {
-    margin-top: 141vw;
+    margin-top: 145.2vw;
+    width:8%;
 }
 #button_where1:hover, #button_where2:hover, #button_where3:hover {
     opacity: 0;
