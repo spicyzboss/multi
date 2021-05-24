@@ -78,6 +78,15 @@ body, html {
 #head,
 #waste1,
 #waste2,
+#head_solve,
+#solve_text1,
+#solve_reduce,
+#solve_reuse,
+#solve_repair,
+#solve_recycle,
+#solve_reject,
+#solve_fish,
+#solve_text2,
 #plastic_top {
     position: absolute;
     width: 100%;
@@ -380,27 +389,84 @@ body, html {
     width: 33%;
     margin-top: 298vw;
     margin-left: 8vw;
-    transition: opacity 1s;
     opacity: 0;
+    transition: opacity 1s;
 }
 #effect_text2 {
     width: 33%;
     margin-top: 297vw;
     margin-left: 58vw;
-    transition: opacity 1s;
     opacity: 0;
+    transition: opacity 1s;
 }
 #effect_text3 {
     margin-top: 313vw;
-    transition: opacity 2s;
     opacity: 0;
+    transition: opacity 2s;
 }
 #effect_text4 {
     margin-top: 328vw;
-    transition: opacity 2s;
     opacity: 0;
+    transition: opacity 2s;
 }
 
+/* ——————————————————————— effect ——————————————————————— */
+#head_solve,
+#solve_text1,
+#solve_text2,
+#solve_reuse,
+#solve_reduce,
+#solve_recycle,
+#solve_repair,
+#solve_reject {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#head_solve {
+    width: 35%;
+    margin-top: 370vw;
+    margin-left: 5vw;
+}
+#solve_text1 {
+    width: 28%;
+    margin-top: 378vw;
+    margin-left: 27vw;
+}
+#solve_reduce {
+    width: 24%;
+    margin-top: 391vw;
+    margin-left: 21vw;
+}
+#solve_reuse {
+    width: 23%;
+    margin-top: 392vw;
+    margin-left: 37vw;
+}
+#solve_repair {
+    width: 23%;
+    margin-top: 382vw;
+    margin-left: 48vw;
+}
+#solve_recycle {
+    width: 23%;
+    margin-top: 400vw;
+    margin-left: 53vw;
+}
+#solve_reject {
+    width: 23%;
+    margin-top: 407vw;
+    margin-left: 38vw;
+}
+#solve_fish {
+    width: 37%;
+    margin-top: 412vw;
+    margin-left: 60vw;
+}
+#solve_text2 {
+    width: 37%;
+    margin-top: 412vw;
+    margin-left: 5vw;
+}
 
 /* ——————————————————————— อย่าซนสิ ——————————————————————— */
 @keyframes up-down {

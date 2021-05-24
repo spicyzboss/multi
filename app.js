@@ -143,7 +143,37 @@ window.addEventListener("mousewheel", () => {
     if (isInViewport(document.querySelector("#effect_text4"))) {
         document.querySelector("#effect_text4").style.opacity = 100;
     }
+    if (isInViewport(document.querySelector("#head_solve"))) {
+        bubble()
+    }
 })
+
+bubble = () => {
+    setInterval(() => {
+        document.querySelector("#head_solve").style.opacity = 100
+    }, 200);
+    setInterval(() => {
+        document.querySelector("#solve_text1").style.opacity = 100
+    }, 500);
+    setInterval(() => {
+        document.querySelector("#solve_repair").style.opacity = 100
+    }, 600);
+    setInterval(() => {
+        document.querySelector("#solve_reuse").style.opacity = 100
+    }, 700);
+    setInterval(() => {
+        document.querySelector("#solve_reduce").style.opacity = 100
+    }, 800);
+    setInterval(() => {
+        document.querySelector("#solve_recycle").style.opacity = 100
+    }, 900);
+    setInterval(() => {
+        document.querySelector("#solve_reject").style.opacity = 100
+    }, 1000);
+    setInterval(() => {
+        document.querySelector("#solve_text2").style.opacity = 100
+    }, 1100);
+}
 
 /**
  * Back to top button
