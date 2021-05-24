@@ -21,7 +21,7 @@ let per_Sec = setInterval(()=>{
         fame_make_money = 2;
     }
     if(returnPackage_inuse > 0 && my_curent_Returned<produced){
-        all_returned += return_package_per_sec;
+        all_returned += returnPackage_inuse*return_package_per_sec;
         my_curent_Returned += returnPackage_inuse*return_package_per_sec;
     }
     good_fame_percent = 100 - bad_fame_percent;
