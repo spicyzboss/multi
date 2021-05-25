@@ -649,7 +649,6 @@ body, html {
     width: 50%;
     margin-top: 888vw;
     margin-left: 24vw;
-    cursor: pointer;
 }
 #callout_button:hover {
     content: url("./img/callout_botton1.png");
