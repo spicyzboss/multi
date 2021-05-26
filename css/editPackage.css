@@ -45,7 +45,7 @@
     position: absolute;
     font-family: Alloy;
     left: 12.5%;
-    color: rgb(32, 218, 125);
+    color: white;
 }
 .status[type="top"]{
     top: 20%;
@@ -61,7 +61,8 @@
 }
 .larger{
     font-size: 20px;
-    color: rgb(0, 225, 255);
+    color: rgb(223, 208, 0);
+
 }
 .coin{
     position: relative;
@@ -119,5 +120,5 @@
     bottom: 5%;
     left: 65%;
     font-family: Alloy;
-    color: rgb(32, 218, 125)
+    color: rgb(223, 208, 0);
 }
