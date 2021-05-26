@@ -3,7 +3,8 @@ let my_curent_Coin = 500, my_curent_Fame = 0,
   produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money;
   let bad_fame_percent;
   let good_fame_percent;
-let per_Sec = setInterval(()=>{
+  let timeS = `notRun`
+let per_Sec = ()=>{
     if(100-Math.round(bad_fame*100/my_curent_Fame) < 25){
         return_package_per_sec = Math.floor(Math.random()*4)/10;
         fame_make_money = 1;
@@ -38,7 +39,6 @@ let per_Sec = setInterval(()=>{
     Bonus.innerHTML = Math.round(fame_make_money*(cash_per_sec_package+coin_per_sec_building)-(cash_per_sec_package+coin_per_sec_building));
     fameFlow.innerHTML = fame_per_sec_package+fame_per_sec_building;
     badFame.style.width = Math.round(bad_fame*100/my_curent_Fame)+'%';
-
     if(my_curent_Product >= 100){
         bubble_sell_product.dataset.for = `sell_product_ready`;
     }
@@ -65,7 +65,7 @@ let per_Sec = setInterval(()=>{
     else{
         bubble_recycle.dataset.state = "onHide";
     }
-}, 1000);
+}
 
 function sellProduct(){
     if(my_curent_Product >= 100){
