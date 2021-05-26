@@ -1,9 +1,10 @@
-.quiz{
+.quiz, .preText{
     font-family: Alloy;
+    width: 90%;
     text-indent: 30px;
     margin-left: 5%;
     margin-top: 2.5%;
-    color:rgb(32, 218, 125);
+    color:rgb(255, 255, 255);
 }
 .ImgEvent{
     width: 70%;
@@ -50,18 +51,19 @@
     height: 10%;
     border: none;
     border-radius: 10px;
-    background: rgb(58, 58, 170);
-    color:white;
+    background: rgb(255, 217, 0);
+    color: black;
     font-size: 15px;
     bottom: 5%;
     left: 42.5%;
     font-family: Alloy;
     cursor: pointer;
-    box-shadow:5px 5px rgb(8, 8, 77);
+    box-shadow:0px 5px rgb(230, 195, 0);
 
 }
 .ButtPush:hover{
     transform: translateY(4px);
-    box-shadow:1px 1px rgb(8, 8, 77);
+    background: rgb(243, 207, 0);
+    box-shadow:0px 1px rgb(230, 195, 0);
 
 }

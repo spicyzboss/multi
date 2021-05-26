@@ -1,17 +1,19 @@
 let my_curent_Coin = 500, my_curent_Fame = 0,
     my_curent_Product = 0, my_curent_Returned = 0,
   produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money;
-
-let per_Sec = setInterval(()=>{
-    if(my_curent_Fame < 100){
+  let bad_fame_percent;
+  let good_fame_percent;
+  let timeS = `notRun`
+let per_Sec = ()=>{
+    if(100-Math.round(bad_fame*100/my_curent_Fame) < 25){
         return_package_per_sec = Math.floor(Math.random()*4)/10;
         fame_make_money = 1;
     }
-    else if(my_curent_Fame < 300){
+    else if(100-Math.round(bad_fame*100/my_curent_Fame) < 40){
         return_package_per_sec = (Math.floor(Math.random()*(6-3))+3)/10;
         fame_make_money = 1.2;
     }
-    else if(my_curent_Fame < 700){
+    else if(100-Math.round(bad_fame*100/my_curent_Fame) < 80){
         return_package_per_sec = (Math.floor(Math.random()*(8-5))+5)/10;
         fame_make_money = 1.5;
     }
@@ -20,15 +22,17 @@ let per_Sec = setInterval(()=>{
         fame_make_money = 2;
     }
     if(returnPackage_inuse > 0 && my_curent_Returned<produced){
-        all_returned += return_package_per_sec;
+        all_returned += returnPackage_inuse*return_package_per_sec;
         my_curent_Returned += returnPackage_inuse*return_package_per_sec;
     }
+    good_fame_percent = 100 - Math.round(bad_fame*100/my_curent_Fame);
+    bad_fame_percent =  Math.round(bad_fame*100/my_curent_Fame)+'%';
     my_curent_Fame += (fame_per_sec_package+fame_per_sec_building)*produce_state;
-    my_curent_Product += (2+2*fac2_inuse)*produce_state;
-    produced += (2+2*fac2_inuse)*produce_state;
+    my_curent_Product += (4+2*fac2_inuse)*produce_state;
+    produced += (4+2*fac2_inuse)*produce_state;
     bad_fame += bad_fame_per_sec_package+bad_fame_per_sec_building;
     myCoin.innerHTML = Math.round(my_curent_Coin);
-    myFame.innerHTML = Math.round(my_curent_Fame*100)/100;
+    myFame.innerHTML = Math.round(my_curent_Fame);
     myStock.innerHTML = my_curent_Product;
     myReturned_package.innerHTML = Math.round(my_curent_Returned);
     cashFlow.innerHTML = Math.round(cash_per_sec_package+coin_per_sec_building);
@@ -61,7 +65,7 @@ let per_Sec = setInterval(()=>{
     else{
         bubble_recycle.dataset.state = "onHide";
     }
-}, 1000);
+}
 
 function sellProduct(){
     if(my_curent_Product >= 100){

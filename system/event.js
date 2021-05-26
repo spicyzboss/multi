@@ -1,29 +1,27 @@
 let per_day = `Ready`;
 let AirPolution = `
-<p class="quiz">   Your company has detected that there is damage to production that could cause air pollution.
- But there is no impact on product manufacturing How do you fix it?</p>
+<p class="quiz">   บริษัทของคุณ ตรวจพบว่ามีความเสียหายในส่วนของการผลิตที่อาจจะก่อให้เกิดมลพิษทางอากาศ แต่ไม่มีผลกระทบในด้านการผลิตสินค้า คุณจะแก้ไขอย่างไร</p>
  <div data-situation="Polution" class="ImgEvent"></div>
  <div class="allChoice">   
- <button class="choice" onclick="Answer(1, AirPolution)">Closed for renovations</button>
-    <button class="choice" onclick="Answer(2, AirPolution)">Use it anyway</button>
-    <button class="choice" onclick="Answer(3, AirPolution)">Repair along with the production of the product</button>
+ <button class="choice" onclick="Answer(1, AirPolution)">ปิดปรับปรุง </button>
+    <button class="choice" onclick="Answer(2, AirPolution)">ใช้ไปก่อน</button>
+    <button class="choice" onclick="Answer(3, AirPolution)">ซ่อมแซมไปพร้อมกับทำการผลิตสินค้า</button>
 </div>
 `
-let ProductProblem = `<p class="quiz">  The product you have produced is faulty. In the material side,
- which is a non-standard material And are going to be sent out to sell, what do you do?</p>
+let ProductProblem = `<p class="quiz">  สินค้าที่คุณผลิตไปนั้นมีความผิดพลาด ในด้านวัสดุซึ่งเป็นวัสดุไม่ได้มาตรฐาน และกำลังจะส่งออกไปขายคุณจะทำอย่างไร</p>
  <div data-situation="Product" class="ImgEvent"></div>
  <div class="allChoice">   
- <button class="choice" onclick="Answer(1, ProductProblem)">Reclaim</button>
-    <button class="choice" onclick="Answer(2, ProductProblem)">Send it anyway</button>
-    <button class="choice" onclick="Answer(3, ProductProblem)">Explain the problem & give them discount</button>
+ <button class="choice" onclick="Answer(1, ProductProblem)">เรียกคืนสินค้าทั้งหมดแล้วกำจัดอย่างถูกวิธี</button>
+    <button class="choice" onclick="Answer(2, ProductProblem)">ส่งขายตามปรกติ</button>
+    <button class="choice" onclick="Answer(3, ProductProblem)">ชี้แจง และทำการขายในราคาถูก</button>
 </div>
 `
-let EnvelonmentConcern = `<p class="quiz">  Right now, there is a lot of plastic on the beach right next to the city where your company lives, what will you do?</p>
+let EnvelonmentConcern = `<p class="quiz">  ตอนนี้ มีพลาสติดในทะเลที่ติดกับเมืองที่บริษัทคุณอาศัยอยู่ จำนวนมาก คุณจะทำสิ่งใด</p>
  <div data-situation="Envelonment" class="ImgEvent"></div>
  <div class="allChoice">   
- <button class="choice" onclick="Answer(1, EnvelonmentConcern)">Reduce the production of products over a period of time</button>
-    <button class="choice" onclick="Answer(2, EnvelonmentConcern)">Establish an organization for this matter</button>
-    <button class="choice" onclick="Answer(3, EnvelonmentConcern)">To clarify and give statements to the relevant departments</button>
+ <button class="choice" onclick="Answer(1, EnvelonmentConcern)">ลดการผลิตสินค้าในช่วงเวลาหนึ่ง</button>
+    <button class="choice" onclick="Answer(2, EnvelonmentConcern)">ทำการจัดตั้งองกรณ์สำหรับเรื่องนี้</button>
+    <button class="choice" onclick="Answer(3, EnvelonmentConcern)">คอยชี้แจงและ ให้งบแก่หน่วยงานที่เกี่ยวข้อง</button>
 </div>
 
 `
@@ -50,15 +48,17 @@ function Answer(chose, question){
 }
 
 function result_Polution(chose){
-    let reply = [`<p class="quiz">You have closed the companty so you product will not be produce in a while(5s); 
+    let reply = [`<p class="quiz">คุณหยุดกระบวนการผลิตของคุณทั้งหมดเป็นระยะเวลาหนึ่ง(4 วินาที)เพื่อหลีกเลี่ยงปัญหาสุขภาพ ของคุณและลูกจ้างพร้อมทำการแก้ไขปัญหา 
+    คุณต้องจ่ายเงินค่า ซ่อมบำรุง 500 <img class="coin" src="pic/coin.png"/> และ ได้รับคำชื่นชมจากลูกน้องและสื่อ 200 <img class="coin" src="pic/fame.png"/> ; 
     </p>
-    `, `<p class="quiz">Your health is deteriorating from working in polluted areas. You have to heal for a while
+    `, `<p class="quiz">คุณและลูกน้องของคุณป่วยทำให้กระบวนการการผลิตถูกหยุดเป็นระยะเวลาหนึ่ง(6 วินาที) และต้องจ่ายค่ารักษาและ ค่าซ่อมแซม 1500 <img class="coin" src="pic/coin.png"/>
+    และได้เสียตอบรับไม่ดี 250 <img class="coin" src="pic/fame.png"/>
     </p>
-    `, `<p class="quiz">The accident happened while you and the employee were working. Your company must be closed for repair for a while(10s)
+    `, `<p class="quiz">บริษัทของคุณเกิดอุบัติเหตุขณะซ่อมบำรุง คุณเสีบสาขาย่อย 1 สาขา
     </p>
-    `, `<p class="quiz">nothing happen.Good luck.</p>
+    `, `<p class="quiz">คุณสามารถผ่านเหตุการนี้ไปได้ด้วยดี</p>
     ` 
-];
+    ];
     if(chose != 3){
         EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Polution" class="ImgEvent"></div>`;
     }
@@ -66,14 +66,16 @@ function result_Polution(chose){
         produce_state = 0;
         setTimeout(()=>{
             produce_state = 1;
-        }, 6000);
+        }, 4000);
         my_curent_Fame+= 50;
+        my_curent_Coin -= 500;
     }
     else if(chose === 2){
         produce_state = 0;
+        my_curent_Coin -= 1500;
         setTimeout(()=>{
             produce_state = 1;
-        }, 8000);
+        }, 6000);
     }
     else if(chose === 3){
         let chance = Math.floor(Math.random()*2);
@@ -91,18 +93,19 @@ function result_Polution(chose){
         }
         
     }
-        EventShowUp.dataset.state = `off`;
-        console.log(`+++`+EventShowUp.dataset.state)
+        setTimeout(()=>{
+            EventShowUp.dataset.state = `off`;
+        }, 1000);
 
 
 }
 
 function result_Product(chose){
-    let reply = [`<p class="quiz">Lose 1000 coins, but will receive praise from the townspeople with a 5% increase in reputation. 
+    let reply = [`<p class="quiz">คุณขอสินค้าคืนและจ่ายค่าเสียหายให้กับลูกค้าของคุณ 750 <img class="coin" src="pic/coin.png"/> ลูกค้าชื่นชมในความรับผิดชอบของคุณและบอกต่อคุณได้รับ 5% <img class="coin" src="pic/fame.png"/>
     </p>
-    `, `<p class="quiz">Your costumer give you the bad comment, So you received a bad response from the townspeople with 7.5%
+    `, `<p class="quiz">ลุกค้าของคุณเกิดความไม่พอใจในการกระทำของคุณและนำไปบอกต่อ คุณได้รับคำติจากสังคม 7.5% <img class="coin" src="pic/fame.png"/>
     </p>
-    `, `<p class="quiz">Wasted  500 coins, but the response of the townspeople wasn't too bad, get bad reputation 5%
+    `, `<p class="quiz">คุณอธิบายสาเหตุของปัญหา และจ่ายค่าเสียหายให้ลูกค้า 500 <img class="coin" src="pic/coin.png"/> ลูกค้าเข้าใจปัญหาของและไม่ทำลายชื่อเสียงของคุณ
     </p>
     `];
     EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Product" class="ImgEvent"></div>`;
@@ -116,18 +119,16 @@ function result_Product(chose){
     }
     else if(chose === 3){
         my_curent_Coin -= 500
-        my_curent_Fame += bad_fame*5/100;
-        bad_fame += bad_fame*7.5/100
     }
     setTimeout(()=>{
         EventShowUp.dataset.state = `off`;
-    }, 1000);
+        }, 1000);
 
 }
 function result_Env(chose){
-    let reply = [`<p class="quiz">Coins do not increase over a period of time but received a positive response from the townspeople with a 6.5% increase in reputation</p>
-    `, `<p class="quiz">Wasted 500 coin, but the townspeople's response was great, with an 8% increase in reputation</p>
-    `, `<p class="quiz">Wasted $ 450, but the response of the townspeople was not very good, with a 5.5% drop in reputation</p>
+    let reply = [`<p class="quiz">คุณหยุดพักการผลิตเป็นช่วงเวลาหนึ่ง(6 วินาที) เพื่อลดปริมาณขยะที่คุณผลิต</p>
+    `, `<p class="quiz">คุณจัดตั้งองค์กรเพื่อจัดการกับปัญหา จ่ายเงินลงทุน 750 <img class="coin" src="pic/coin.png"/> และได้ผลตอบรับที่ดี เป็น 8% <img class="coin" src="pic/fame.png"/></p>
+    `, `<p class="quiz">คุณชี้แจงปัญหาให้กับหน่วยงานที่เกี่ยวข้อง และออกเงินช่วยเหลือ 300 <img class="coin" src="pic/coin.png"/> ผลตอบรับไม่ได้แย่นัก </p>
     `];
     EventShowUp.innerHTML = reply[chose-1]+`<div data-situation="Envelonment" class="ImgEvent"></div>`;
     if(chose === 1){
@@ -138,17 +139,71 @@ function result_Env(chose){
         my_curent_Fame += (my_curent_Fame-bad_fame)*6/100;
     }
     else if(chose === 2){
-        my_curent_Coin -= 500
+        my_curent_Coin -= 750
         my_curent_Fame += (my_curent_Fame-bad_fame)*8/100;
 
     }
     else if(chose === 3){
-        my_curent_Coin -= 450
-        my_curent_Fame += bad_fame*5.5/100;
-        bad_fame += bad_fame*5.5/100
+        my_curent_Coin -= 300
+
     }
     setTimeout(()=>{
         EventShowUp.dataset.state = `off`;
-    }, 1000);
+        }, 1000);
 
+}
+function EndGame(){
+    clearInterval(per_Sec);
+    Ending.classList.add("visible");
+    Ending.style.top = 0;
+    Ending.style.left = 0;
+    let tableEnd = `<table class="report"><tr><td class="tableHead">ความรับผิดชอบของคุณเป็นอย่างไร</td><tr>
+    <tr><td>ผลิต</td><td id="Total_produced" class="right-side"></td></tr>
+    <tr><td>เก็บคืน</td><td id="Total_returned" class="right-side"></td></tr>
+    <tr><td>รีไซเคิล</td><td id="Total_recycle" class="right-side"></td></tr>
+    <div class="endFameBar" style="height: 2.5%;"><div class="bad_fame_percent" id="redEnd"></div></div>
+    <a href="landing.html" target="_self"><button class="ButtPush">
+    Read Campaign
+</button>
+</a>`
+
+    let allWin = document.querySelectorAll(".WindowCanvas");
+    allWin.forEach((el)=>{
+        el.dataset.state= "off";
+    });
+    console.log(`:::`+good_fame_percent);
+
+    if(good_fame_percent >= 40 && good_fame_percent <= 60){
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader">ยินดีด้วย</h1>
+        <p class="Ending-text">จากการกระทำของคุณทำให้บริษัทของคุณไปต่อได้อย่างราบรื่นโดยบริษัทไม่ได้ขาดทุนแถมคุณยังช่วยสิ่งแวดล้อม ไม่ให้ถูกทำลายไปมาก</p></div>
+             
+             `;
+    }
+    else if(good_fame_percent >= 0 && good_fame_percent < 50){
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader">ยินดีด้วย</h1>
+        <p class="Ending-text">จากการกระทำของคุณทำให้คุณร่ำรวย มีกิจการที่ดีมีรายได้เพิ่ม แต่คุณทำลายสภาพแวดล้อมโดยรอบ ทำให้เกิดมลพิษทางสิ่งแวดล้อม สิ่งมีชีวิตล้มตาย</p></div>
+             
+             `;
+
+    }
+    else{
+        EndText.innerHTML = `
+        <div><h1 class="EndHeader">ยินดีด้วย</h1>
+        <p class="Ending-text">จากการกระทำของคุณทำให้บริษัทของคุณไปต่อได้อย่างราบรื่นโดยบริษัทไม่ได้ขาดทุนแถมคุณยังช่วยสิ่งแวดล้อม ไม่ให้ถูกทำลายไปมาก</p></div>
+
+             `;
+    }
+    EndText.innerHTML += tableEnd
+    Total_produced.innerHTML = produced;
+    Total_returned.innerHTML = Math.round(all_returned);
+    Total_recycle.innerHTML = RecycleUse;
+    if(bad_fame_percent > `100%`){
+        redEnd.style.width = `100%`;
+
+    }
+    else{
+        redEnd.style.width = bad_fame_percent;
+    }
 }

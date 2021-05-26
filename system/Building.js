@@ -21,14 +21,18 @@ function countBuilding(){
         else if(land.dataset.building === "Fac2")
             fac2_inuse++;
 });
-bad_fame_per_sec_building = 6*fac2_inuse
+bad_fame_per_sec_building = 4*fac2_inuse
 fame_per_sec_building = bad_fame_per_sec_building +(3*(returnPackage_inuse+recycle_inuse));
 console.log(`fac2: `+fac2_inuse);
 console.log(`returnPackage: `+returnPackage_inuse);
 console.log(`recycle: `+recycle_inuse);
 }
+let RecycleUse = 0
 function RecycleActivate(){
+    if(my_curent_Returned> 100){
     my_curent_Returned -= 100;
     my_curent_Product += 50;
     my_curent_Fame+= 10;
+    RecycleUse += 100;
+    }
 }

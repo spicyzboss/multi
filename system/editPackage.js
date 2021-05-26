@@ -14,8 +14,8 @@ Edit.innerHTML = `<div class="modelCollect">
             <button class="nextButt cen" onclick="navi('next', allModel[1], curentCen)"><div class="arrowNext"></div></button>
             <button class="preButt bot" onclick="navi('pre', allModel[2], curentBot)"><div class="arrowPre"></div></button>
             <button class="nextButt bot" onclick="navi('next', allModel[2], curentBot)"><div class="arrowNext"></div></button>
-            <div id="CloseEd"></div>
             <div class="status_package">Curent status: <img class="coin" src="pic/coin.png"/> <span id="curent_coin_package_status">9</span>  <img class="coin" src="pic/fame.png"/> <span id="curent_fame_package_status">3</span>/s</div>
+
             `;
 let curentTop = 0;
 let curentCen = 0;
@@ -190,4 +190,14 @@ function navi(direct, type, num){
     console.log(`bad: `+bad_fame_per_sec_package)
     curent_coin_package_status.innerHTML = cash_per_sec_package; 
     curent_fame_package_status.innerHTML = fame_per_sec_package; 
+}
+let closeText = `
+<div id="CloseEd" onclick="Edit.dataset.state='off'"></div>
+`
+function  go(){
+  Edit.dataset.state = `off`;
+  Edit.innerHTML = saveText+closeText;
+  setInterval(per_Sec, 1000);
+  timeStart();
+  
 }
