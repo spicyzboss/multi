@@ -5,6 +5,9 @@
         <link href="css/editPackage.css" rel="stylesheet"/>
         <link href="css/event.css" rel="stylesheet"/>
         <style>
+            :root{
+                --light: 48%;
+            }
             @font-face {
                 font-family: Alloy;
                 src: url(font/AlloyInk/AlloyInk-nRLyO.ttf);
@@ -88,7 +91,7 @@
                 cursor: pointer;
             }
             .map{
-                background: rgb(134, 189, 58);
+                background: hsl(85, 53%, var(--light));
                 width: 100vw;
                 height: 100vh;
             }
@@ -352,7 +355,7 @@
             }
             #summary{
                 position: absolute;
-                width: 35vw;
+                width: 34.9vw;
                 height: 50vh;
                 background: gold;
                 border-radius: 10px;
@@ -376,6 +379,29 @@
                 top: 5%;
                 left: 5%
 
+            }
+            .price{
+                position: absolute;
+                bottom: 10%;
+                right: 10%;
+                width: 25%;
+                height: 7.5%;
+                background: rgb(170, 150, 33);
+                border-radius: 20px;
+            }
+            .textPrice{
+                position: absolute;
+                top: -30%;
+                right: 1%;
+                
+            }
+            .say{
+                position: absolute;
+                right: 100%;
+                width: 100%;
+                height: auto;
+                background: rgb(102, 102, 201);
+                z-index: 10;
             }
         </style>
     </head>
@@ -641,7 +667,7 @@
             <div class="info" type="bottle"> <img class="onBar" src="pic/bottle.png"/> <span id="myStock" class="right-side">0</span></div>
             <div class="info" type="returned"> <img class="onBar" src="pic/returned_bottle.png"/> <span id="myReturned_package" class="right-side">0</span></div>
         </div>
-        <div id="Edit" class="WindowCanvas"></div>
+        <div id="Edit" class="WindowCanvas"data-state="off"></div>
         <div id="EventShowUp" data-state="off" class="WindowCanvas"></div>
         <div id="Ending" data-state="off" class="WindowCanvas"><div class="black"></div><div id="EndText"></div></div>
         <div id="TIP" data-state="off" class="WindowCanvas" style="background:gold"><div id="closeTip" style="z-index: 10;"onclick="TIP.dataset.state=`off`"></div><div id="tip-pic"></div></div>
@@ -659,23 +685,24 @@
 
             </table>
         </div>
+        <div id="summary" data-state="off"><div id="summaryText"></div></div>
         <div id="buildBar">
-            <button class="buildOp" whichBuild="Fac2" onclick="build(nowSelect, Fac2, `Fac2`)"><svg class="imgOp" viewBox="0 0 200 132">
+            <button class="buildOp" whichBuild="Fac2" onmouseover="showSummary(0)" onmouseout="closeSummary()" onclick="build(nowSelect, Fac2, `Fac2`)"><svg class="imgOp" viewBox="0 0 200 132">
                 <g id="optionFac2" transform="scale(1.7) translate(-35 20)"></g>
             </svg></button>
 
-            <button class="buildOp" whichBuild="Return" onclick="build(nowSelect, packageReturn, `Return`)"><svg class="imgOp" viewBox="0 0 200 132">
+            <button class="buildOp" whichBuild="Return" onmouseover="showSummary(1)" onmouseout="closeSummary()" onclick="build(nowSelect, packageReturn, `Return`)"><svg class="imgOp" viewBox="0 0 200 132">
                 <g id="optionReturn" transform="scale(1.7) translate(-35 10)"></g>
             </svg></button>
 
-            <button class="buildOp" whichBuild="Recycle" onclick="build(nowSelect, reFac, `Recycle`)"><svg class="imgOp" viewBox="0 0 200 132">
+            <button class="buildOp" whichBuild="Recycle" onmouseover="showSummary(2)" onmouseout="closeSummary()" onclick="build(nowSelect, reFac, `Recycle`)"><svg class="imgOp" viewBox="0 0 200 132">
                 <g id="optionRecycle" transform="scale(1.7) translate(-35 10)"></g>
             </svg></button>
 
         </div>
-        <button id="bubble_recycle" data-for="activate_recycle" class="bubble" data-state="onShow" onclick="RecycleActivate()"></button>
-        <button id="bubble_sell_product" data-for="sell_product_notReady"class="bubble" data-state="onShow" onclick="sellProduct()"></button>
-        <button id="bubble_Edit" data-for="openEdit"class="bubble" data-state="onShow" onclick="Editting()"></button>
+        <button title="ปุ่ท Recycle(100ชิ้น)" id="bubble_recycle" data-for="activate_recycle" class="bubble" data-state="onShow" onclick="RecycleActivate()"></button>
+        <button title="ปุ่ม Sell(100ชิ้น)" id="bubble_sell_product" data-for="sell_product_notReady"class="bubble" data-state="onShow" onclick="sellProduct()"></button>
+        <button title="ปุ่ม เปลี่ยนชนิดบรรจุภัณฑ์" id="bubble_Edit" data-for="openEdit"class="bubble" data-state="onShow" onclick="Editting()"></button>
         <div class="backstage"></div>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/el/fac.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/el/fac2.js"></SCRIPT>
@@ -695,37 +722,37 @@
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/coin.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/Building.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/event.js"></SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript" SRC="js/system/summary.js"></SCRIPT>
         <script>
             let nowSelect = ``;
+            let saveText = ``;
             optionFac2.innerHTML = Fac2;
             optionReturn.innerHTML = packageReturn;
             optionRecycle.innerHTML = reFac;
 
             function Editting() {
-                    Edit.classList.add("visible");
-                    console.log(Edit.classList)
-                }
-            function gameStart(){
-            timeStart();
-            StartWin.classList.remove("visible")
-            /*main(Global)*/
-            const building = document.querySelectorAll("#abc");
-            const alldemand = document.querySelectorAll("#demand");
-            const rec = document.querySelector("#record");
-            const refNode = document.querySelector("#title");
-            const use = document.querySelectorAll(".inUse");
-            const skycolor = document.querySelector(":root");
+                    Edit.dataset.state = "on";
 
-            let pause = 0;
-                CloseEd.onclick = () => {
-                    let allclose = document.querySelectorAll(".visible");
-                    console.log(1)
-                    allclose.forEach((el)=>{
-                        el.classList.remove("visible");
-                    })
-                }
+            }
 
 
+            function gameStart(){   
+                Editting();
+                saveText = Edit.innerHTML;
+                Edit.innerHTML = Edit.innerHTML+`
+            <button id="firstButt" class="ButtPush" onclick="go()" style="background: gold; color: black;box-shadow:0px 4px rgb(221, 193, 32);">เริ่ม</button>
+`;
+                StartWin.classList.remove("visible");
+                /*main(Global)*/
+                const building = document.querySelectorAll("#abc");
+                const alldemand = document.querySelectorAll("#demand");
+                const rec = document.querySelector("#record");
+                const refNode = document.querySelector("#title");
+                const use = document.querySelectorAll(".inUse");
+                const skycolor = document.querySelector(":root");
+                let pause = 0;
+
+                
                 titleRec.onclick = () => {
                     RecZone.style.transition = "1s";
                     RecZone.classList.toggle("openRec");
@@ -820,19 +847,26 @@
         }
         function timeStart() {
             let days =  1;
-            let min = [0, 0];
+            let min = [5, 0];
             let hour = [0, 8];
-
+            let diff = 0;
+            var root = document.querySelector(':root');
+            let nowLight = (48-((hour[0]*10+hour[1])+diff)+8);
             let eventTime = Math.floor((Math.random()*(21-12))+12);
             console.log(eventTime);
-            var looktime = setInterval(()=>{
+            var looktime = ()=>{
                 min[1]++;
                 if(min[1] >=  10){
                     min[1] = 0;
                     min[0]++;
                     if(min[0] >= 6){
                         min[0] = 0;
+                        diff += 0.1;
                         hour[1]++;
+                        nowLight = (48-((hour[0]*10+hour[1])+diff)+8);
+                        if(nowLight >= 35){
+                            root.style.setProperty('--light', (48-((hour[0]*10+hour[1])+diff)+8)+`%`);
+                        }
                         if(hour[1] >= 10){
                             hour[1] = 0;
                             hour[0]++;
@@ -849,6 +883,8 @@
                         hour[1] = 8;
                         hour[0] = 0;
                         days++;
+                        diff = 0;
+                        root.style.setProperty('--light', (48-((hour[0]*10+hour[1])+diff)+8)+`%`);
                         event = Math.floor((Math.random()*(21-12))+12);
                         per_day = `Ready`
                         console.log(eventTime);
@@ -861,7 +897,9 @@
                 showTime.innerHTML = `${hour[0]}${hour[1]}:${min[0]}${min[1]}`;
                 showDay.innerHTML = days;
 
-            }, 125);
+            };
+            setInterval(looktime, 125);
+
         }
 
         function check(){
