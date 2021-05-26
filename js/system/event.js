@@ -199,11 +199,11 @@ function EndGame(){
     Total_produced.innerHTML = produced;
     Total_returned.innerHTML = Math.round(all_returned);
     Total_recycle.innerHTML = RecycleUse;
-    if(bad_fame_percent > `100%`){
+    if(bad_fame_percent > 100){
         redEnd.style.width = `100%`;
 
     }
     else{
-        redEnd.style.width = bad_fame_percent;
+        redEnd.style.width = bad_fame_percent+`%`;
     }
 }

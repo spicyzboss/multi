@@ -26,7 +26,7 @@ let per_Sec = ()=>{
         my_curent_Returned += returnPackage_inuse*return_package_per_sec;
     }
     good_fame_percent = 100 - Math.round(bad_fame*100/my_curent_Fame);
-    bad_fame_percent =  Math.round(bad_fame*100/my_curent_Fame)+'%';
+    bad_fame_percent =  Math.round(bad_fame*100/my_curent_Fame);
     my_curent_Fame += (fame_per_sec_package+fame_per_sec_building)*produce_state;
     my_curent_Product += (4+2*fac2_inuse)*produce_state;
     produced += (4+2*fac2_inuse)*produce_state;
