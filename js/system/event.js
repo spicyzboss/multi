@@ -20,7 +20,7 @@ let EnvelonmentConcern = `<p class="quiz">  ตอนนี้ มีพลา�
  <div data-situation="Envelonment" class="ImgEvent"></div>
  <div class="allChoice">   
  <button class="choice" onclick="Answer(1, EnvelonmentConcern)">ลดการผลิตสินค้าในช่วงเวลาหนึ่ง</button>
-    <button class="choice" onclick="Answer(2, EnvelonmentConcern)">ทำการจัดตั้งองกรณ์สำหรับเรื่องนี้</button>
+    <button class="choice" onclick="Answer(2, EnvelonmentConcern)">ทำการจัดตั้งองค์กรสำหรับเรื่องนี้</button>
     <button class="choice" onclick="Answer(3, EnvelonmentConcern)">คอยชี้แจงและ ให้งบแก่หน่วยงานที่เกี่ยวข้อง</button>
 </div>
 
