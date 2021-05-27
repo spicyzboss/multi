@@ -42,8 +42,7 @@ var looktime = ()=>{
             diff = 0;
             root.style.setProperty('--light', (48-((hour[0]*10+hour[1])+diff)+8)+`%`);
             eventTime = Math.floor((Math.random()*(21-12))+12);
-            per_day = `Ready`
-            console.log(eventTime);
+            per_day = `Ready`;
         }
         else{
             clearInterval(timeState);
