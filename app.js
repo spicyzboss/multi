@@ -121,7 +121,7 @@ human = () => {
 
 playGame = () => window.location.href = `index.html`
 
-window.addEventListener("mousewheel", () => {
+window.addEventListener("scroll", () => {
     if (isInViewport(document.querySelector("#button_where1"))) {
         document.querySelector("#where_text1").style.opacity = 100;
         document.querySelector("#button_where1").style.opacity = 0;
