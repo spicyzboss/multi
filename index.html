@@ -1,6 +1,7 @@
 <html>
     <head>
         <title> ::Fac-Sim::</title>
+        <link rel="shortcut icon" href="./img/logo.png" type="image/x-png">
         <link href="css/rec.css" rel="stylesheet"/>
         <link href="css/editPackage.css" rel="stylesheet"/>
         <link href="css/event.css" rel="stylesheet"/>
@@ -27,7 +28,7 @@
                 color:white;
                 font-size: 25%;
                 width: 80%;
-                z-index: 10;
+
             }
             .EndHeader{
                 font-size: 35%;
@@ -180,9 +181,6 @@
             h2{
                 text-align: center;
             }
-
-           
-
             #bar {
                 position: fixed;
                 top: -12.5%;
@@ -197,6 +195,12 @@
                 width: 20px;
                 height: 20px;
                 top: -5%;
+            }
+            .cover{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: none;
             }
             .right-side{
                 position: absolute;
@@ -243,7 +247,10 @@
                 font-size: 3vh;
             }
             .land{
-                stroke:#b1a33c;
+                stroke:#ffee00;
+            }
+            .land:hover{
+                stroke:#8d8400;
             }
             #buildBar{
                 position:absolute;
@@ -339,8 +346,8 @@
                 position: absolute;
                 bottom: 5%;
                 right: 2.5%;
-                width: 75px;
-                height: 37.5px;
+                width: 10%;
+                height: 7.5%;
                 border: none;
                 border-radius: 10px;
                 background: rgba(0, 0, 0, 0.5);
@@ -661,29 +668,30 @@
         </svg>
 
         <div id="bar">
-            <div class="timeShow" style="font-family: sans-serif;"><div class="timeText"><br><br><br><br><br><h3>Day <span id="showDay">1</span></h3><h4><span id="showTime">00:00</span></h4></div></div>
+            <div class="timeShow" style="font-family: sans-serif;"><div class="timeText"><br><br><br><br><br><h3>Day <span id="showDay">1</span></h3><div class="cover"></div><h4><span id="showTime">00:00</span></h4></div></div>
             <div class="info" type="money"> <img class="onBar" src="pic/coin.png"/> <span id="myCoin" class="right-side">300</span></div>
             <div class="info" type="fame"> <img class="onBar" src="pic/fame.png"/> <span id="myFame" class="right-side">0</span></div>
             <div class="info" type="bottle"> <img class="onBar" src="pic/bottle.png"/> <span id="myStock" class="right-side">0</span></div>
             <div class="info" type="returned"> <img class="onBar" src="pic/returned_bottle.png"/> <span id="myReturned_package" class="right-side">0</span></div>
+            <div class="cover"></div>
         </div>
         <div id="Edit" class="WindowCanvas"data-state="off"></div>
         <div id="EventShowUp" data-state="off" class="WindowCanvas"></div>
-        <div id="Ending" data-state="off" class="WindowCanvas"><div class="black"></div><div id="EndText"></div></div>
+        <div id="Ending" data-state="off" class="WindowCanvas"><div class="black"></div><div id="EndText"></div><div class="cover"></div></div>
         <div id="TIP" data-state="off" class="WindowCanvas" style="background:gold"><div id="closeTip" style="z-index: 10;"onclick="TIP.dataset.state=`off`"></div><div id="tip-pic"></div></div>
         </div>
         <div id="RecZone" class="recStyle hideStatus">
-            <div id="titleRec">
-                <h1>Status</h1>
-            </div>
+            <h1>Status</h1>
             <div class="hideNshow_status"><button data-state="off" id="hideToggle" onclick="showStatus()"></button></div> 
             <table id="record">
-                <tr><td>cash-flow: <span id="cashFlow"></span>/s</td>
-                    <td class="right-side">bonus: <span id="Bonus"></span></td></tr>
-                <tr><td>fame-flow: <span id="fameFlow"></span>/s</td></tr>
-                <tr><td>Bad-fame: <div class="fameBar"><div id="badFame"></div></div></td></tr>
+                <tr><td>ราคาขวด: </td>
+                    <td class="right-side"><span id="cashFlow"></span>/ชิ้น</td></tr>
+                <tr><td>ค่าชื่อเสียง: </td>
+                    <td class="right-side"><span id="fameFlow"></span>/วินาที</td></tr>
+                <tr><td>ชื่อเสีย-ชื่อเสียง: <div class="fameBar"><div id="badFame"></div></div></td></tr>
 
             </table>
+            <div class="cover"></div>
         </div>
         <div id="summary" data-state="off"><div id="summaryText"></div></div>
         <div id="buildBar">
@@ -723,6 +731,7 @@
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/Building.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/event.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" SRC="js/system/summary.js"></SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript" SRC="js/system/time.js"></SCRIPT>
         <script>
             let nowSelect = ``;
             let saveText = ``;
@@ -751,39 +760,6 @@
                 const use = document.querySelectorAll(".inUse");
                 const skycolor = document.querySelector(":root");
                 let pause = 0;
-
-                
-                titleRec.onclick = () => {
-                    RecZone.style.transition = "1s";
-                    RecZone.classList.toggle("openRec");
-                    setTimeout(()=>{RecZone.style.transition = "none";},1000)
-
-                    console.log(RecZone.classList);
-                }
-
-                /*
-                Pbutt.onclick = () => {
-                    if(pause == 1){
-                        pause = 0;
-                    }
-                    else{
-                        pause = 1;
-                    }
-                }
-                */
-                /* Demand Request 
-                let where = setInterval(()=>{
-                    if(pause == 0){
-                        let arrayNO = Math.floor(Math.random() * 4);
-                        alldemand[arrayNO].classList.add("now-req");
-                        setTimeout(()=>{
-                            alldemand[arrayNO].classList.remove("now-req");
-                        },12000)
-                        console.log(alldemand[arrayNO]);
-                    }
-                }, 5000)
-                */
-                /* buidingSelection*/
 
                 window.addEventListener("click", (e)=>{
                     let target = e.target.parentElement.parentElement;
@@ -844,62 +820,7 @@
         function openTip(){
             TIP.dataset.state="on";
         }
-        function timeStart() {
-            let days =  1;
-            let min = [5, 0];
-            let hour = [0, 8];
-            let diff = 0;
-            var root = document.querySelector(':root');
-            let nowLight = (48-((hour[0]*10+hour[1])+diff)+8);
-            let eventTime = Math.floor((Math.random()*(21-12))+12);
-            console.log(eventTime);
-            var looktime = ()=>{
-                min[1]++;
-                if(min[1] >=  10){
-                    min[1] = 0;
-                    min[0]++;
-                    if(min[0] >= 6){
-                        min[0] = 0;
-                        diff += 0.1;
-                        hour[1]++;
-                        nowLight = (48-((hour[0]*10+hour[1])+diff)+8);
-                        if(nowLight >= 35){
-                            root.style.setProperty('--light', (48-((hour[0]*10+hour[1])+diff)+8)+`%`);
-                        }
-                        if(hour[1] >= 10){
-                            hour[1] = 0;
-                            hour[0]++;
-                        }
-                    }
-                }
-                if((hour[0]*10+hour[1]) == eventTime && EventShowUp.dataset.state === "off"){
-                    eventCall()
-                }
-                if(hour[0] == 2 && hour[1] == 2){
-                    if(days < 3){
-                        min[1] = 0;
-                        min[0] = 0;
-                        hour[1] = 8;
-                        hour[0] = 0;
-                        days++;
-                        diff = 0;
-                        root.style.setProperty('--light', (48-((hour[0]*10+hour[1])+diff)+8)+`%`);
-                        event = Math.floor((Math.random()*(21-12))+12);
-                        per_day = `Ready`
-                        console.log(eventTime);
-                    }
-                    else{
-                        clearInterval(looktime);
-                        EndGame();
-                    }
-                }
-                showTime.innerHTML = `${hour[0]}${hour[1]}:${min[0]}${min[1]}`;
-                showDay.innerHTML = days;
 
-            };
-            setInterval(looktime, 125);
-
-        }
 
         function check(){
             console.log("Clicked");
