@@ -146,6 +146,19 @@ window.addEventListener("mousewheel", () => {
     if (isInViewport(document.querySelector("#head_solve"))) {
         bubble()
     }
+    if (isInViewport(document.querySelector("#head_effect"))) {
+        document.querySelector("#head_effect").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#effect_nature"))) {
+        setInterval(() => {
+            document.querySelector("#effect_nature").style.opacity = 100
+            document.querySelector("#effect_text1").style.opacity = 100
+        }, 500);
+        setInterval(() => {
+            document.querySelector("#effect_human").style.opacity = 100
+            document.querySelector("#effect_text2").style.opacity = 100
+        }, 1000)
+    }
 })
 
 bubble = () => {

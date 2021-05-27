@@ -30,10 +30,9 @@ body, html {
     color: wheat;
 }
 
-
-#arrow_left_preload, #arrow_right_preload {
+/* #arrow_left_preload, #arrow_right_preload {
     display: none;
-}
+} */
 
 #pole,
 #where_text1,
@@ -372,9 +371,11 @@ body, html {
 }
 #arrow_left {
     margin-left: 45vw;
+    animation: kaprib 1s linear infinite alternate;
 }
 #arrow_right {
     margin-left: 87vw;
+    animation: kaprib 1s linear infinite alternate;
 }
 #arrow_right:hover {
     content: url("./img/howmuch2_right_button.png");
@@ -388,6 +389,8 @@ body, html {
     width: 40%;
     margin-top: 275vw;
     margin-left: 28.3vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #effection_button1 {
     width: 20%;
@@ -435,18 +438,22 @@ body, html {
     width: 25%;
     margin-top: 289vw;
     margin-left: 12vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #effect_human {
     width: 26%;
     margin-top: 288.1vw;
     margin-left: 60vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #effect_text1 {
     width: 33%;
     margin-top: 298vw;
     margin-left: 8vw;
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 1s;
 }
 #effect_text2 {
     width: 33%;
@@ -859,4 +866,9 @@ body, html {
 @keyframes lumsang2 {
     0% {transform: rotateZ(0deg);}
     100% {transform: rotateZ(-15deg);}
+}
+@keyframes kaprib {
+    100% {
+        filter: drop-shadow(0 0 15px rgb(169, 62, 62));
+    }
 }
