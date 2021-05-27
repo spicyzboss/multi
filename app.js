@@ -159,6 +159,48 @@ window.addEventListener("mousewheel", () => {
             document.querySelector("#effect_text2").style.opacity = 100
         }, 1000)
     }
+    if (isInViewport(document.querySelector("#epr_head"))) {
+        document.querySelector("#epr_head").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_text1"))) {
+        document.querySelector("#col_epr_text1").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_img1"))) {
+        document.querySelector("#col_epr_img1").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_img2_2"))) {
+        document.querySelector("#col_epr_img2_2").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_img3"))) {
+        document.querySelector("#col_epr_img3").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_img4_2"))) {
+        document.querySelector("#col_epr_img4_2").style.opacity = 100
+    }
+    if (isInViewport(document.querySelector("#col_epr_text4"))) {
+        document.querySelector("#col_epr_text4").style.opacity = 100
+        setInterval(() => {
+            document.querySelector("#col_epr_text5").style.opacity = 100
+        }, 700);
+        setInterval(() => {
+            document.querySelector("#col_epr_img5").style.opacity = 100
+        }, 1000);
+    }
+    if (isInViewport(document.querySelector("#col_epr_img6"))) {
+        document.querySelector("#col_epr_img6").style.opacity = 100
+        setInterval(() => {
+            document.querySelector("#col_epr_text6").style.opacity = 100
+        }, 500);
+    }
+    if (isInViewport(document.querySelector("#col1_epr_text2"))) {
+        document.querySelector("#col1_epr_text2").style.opacity = 100
+        setInterval(() => {
+            document.querySelector("#col1_epr_text3").style.opacity = 100
+        }, 300);
+        setInterval(() => {
+            document.querySelector("#col1_epr_text4").style.opacity = 100
+        }, 600);
+    }
 })
 
 bubble = () => {

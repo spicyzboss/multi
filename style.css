@@ -554,11 +554,15 @@ body, html {
     width: 37%;
     margin-top: 482vw;
     margin-left: 30vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_text1 {
     width: 27%;
     margin-top: 528vw;
     margin-left: 35vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_text2 {
     width: 50%;
@@ -569,11 +573,15 @@ body, html {
     width: 45%;
     margin-top: 574vw;
     margin-left: 27vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_img2_2 {
     width: 45%;
     margin-top: 590vw;
     margin-left: 4vw;
+    opacity: 0;
+    transition: opacity 1s;
     animation: sangsong3 7s linear infinite alternate;
 }
 #col_epr_text3 {
@@ -585,37 +593,51 @@ body, html {
     width: 40%;
     margin-top: 626vw;
     margin-left: 29vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_img4_2 {
     width: 40%;
     margin-top: 656vw;
     margin-left: 50vw;
+    opacity: 0;
+    transition: opacity 1s;
     animation: sangsong4 6s linear infinite alternate;
 }
 #col_epr_text4 {
     width: 45%;
     margin-top: 676vw;
     margin-left: 28vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_text5 {
     width: 45%;
     margin-top: 692vw;
     margin-left: 4vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_img5 {
     width: 30%;
     margin-top: 687vw;
     margin-left: 48vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_img6 {
     width: 30%;
     margin-top: 723vw;
     margin-left: 7vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col_epr_text6 {
     width: 70%;
     margin-top: 729vw;
     margin-left: 24vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col1_epr_text1 {
     width: 60%;
@@ -631,16 +653,22 @@ body, html {
     width: 60%;
     margin-top: 766vw;
     margin-left: 16vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col1_epr_text3 {
     width: 60%;
     margin-top: 780vw;
     margin-left: 17vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col1_epr_text4 {
     width: 60%;
     margin-top: 800vw;
     margin-left: 17vw;
+    opacity: 0;
+    transition: opacity 1s;
 }
 #col1_epr_text5 {
     width: 60%;
