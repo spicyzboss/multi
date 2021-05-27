@@ -23,9 +23,6 @@ function countBuilding(){
 });
 bad_fame_per_sec_building = 4*fac2_inuse
 fame_per_sec_building = bad_fame_per_sec_building +(3*(returnPackage_inuse+recycle_inuse));
-console.log(`fac2: `+fac2_inuse);
-console.log(`returnPackage: `+returnPackage_inuse);
-console.log(`recycle: `+recycle_inuse);
 }
 let RecycleUse = 0
 function RecycleActivate(){
