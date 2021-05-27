@@ -657,12 +657,13 @@ body, html {
     margin-left: 10vw;
 }
 #callout_button {
-    width: 50%;
-    margin-top: 888vw;
-    margin-left: 24vw;
+    width: 30%;
+    margin-top: 897vw;
+    margin-left: 35vw;
+    cursor: pointer;
 }
 #callout_button:hover {
-    content: url("./img/callout_botton1.png");
+    content: url("./img/callout_button1.png");
 }
 #col1_epr_light_right1 {
     width: 50%;

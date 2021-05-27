@@ -202,3 +202,4 @@ if (backtotop) {
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
 }
+callout = () => window.open("https://www.greenpeace.org/thailand/act/refuseplastic/", "_blank")
