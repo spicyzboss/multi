@@ -195,9 +195,9 @@ let closeText = `
 <div id="CloseEd" onclick="Edit.dataset.state='off'"></div>
 `
 function  go(){
+  timeState = setInterval(looktime, 125);
   Edit.dataset.state = `off`;
   Edit.innerHTML = saveText+closeText;
-  setInterval(per_Sec, 1000);
-  timeStart();
-  
+  coinState = setInterval(per_Sec, 1000);
+
 }

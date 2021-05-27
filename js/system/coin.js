@@ -1,6 +1,6 @@
 let my_curent_Coin = 500, my_curent_Fame = 0,
     my_curent_Product = 0, my_curent_Returned = 0,
-  produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money;
+  produced = 0, bad_fame = 0, all_returned = 0, produce_state=1, fame_make_money, coinState;
   let bad_fame_percent;
   let good_fame_percent;
   let timeS = `notRun`
@@ -36,7 +36,6 @@ let per_Sec = ()=>{
     myStock.innerHTML = my_curent_Product;
     myReturned_package.innerHTML = Math.round(my_curent_Returned);
     cashFlow.innerHTML = Math.round(cash_per_sec_package+coin_per_sec_building);
-    Bonus.innerHTML = Math.round(fame_make_money*(cash_per_sec_package+coin_per_sec_building)-(cash_per_sec_package+coin_per_sec_building));
     fameFlow.innerHTML = fame_per_sec_package+fame_per_sec_building;
     badFame.style.width = Math.round(bad_fame*100/my_curent_Fame)+'%';
     if(my_curent_Product >= 100){

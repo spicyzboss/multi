@@ -93,11 +93,7 @@ function result_Polution(chose){
         }
         
     }
-        setTimeout(()=>{
-            EventShowUp.dataset.state = `off`;
-        }, 1000);
-
-
+    setTimeout(getGoing(), 1000);
 }
 
 function result_Product(chose){
@@ -120,9 +116,7 @@ function result_Product(chose){
     else if(chose === 3){
         my_curent_Coin -= 500
     }
-    setTimeout(()=>{
-        EventShowUp.dataset.state = `off`;
-        }, 1000);
+    setTimeout(getGoing(), 1000);
 
 }
 function result_Env(chose){
@@ -147,25 +141,20 @@ function result_Env(chose){
         my_curent_Coin -= 300
 
     }
-    setTimeout(()=>{
-        EventShowUp.dataset.state = `off`;
-        }, 1000);
-
+    setTimeout(getGoing(), 1000);
+        
 }
 function EndGame(){
     clearInterval(per_Sec);
     Ending.classList.add("visible");
     Ending.style.top = 0;
     Ending.style.left = 0;
-    let tableEnd = `<table class="report"><tr><td class="tableHead">ความรับผิดชอบของคุณเป็นอย่างไร</td><tr>
+    let tableEnd = `<br><table class="report"><tr><td class="tableHead">ความรับผิดชอบของคุณเป็นอย่างไร</td><tr>
     <tr><td>ผลิต</td><td id="Total_produced" class="right-side"></td></tr>
     <tr><td>เก็บคืน</td><td id="Total_returned" class="right-side"></td></tr>
-    <tr><td>รีไซเคิล</td><td id="Total_recycle" class="right-side"></td></tr>
+    <tr><td>รีไซเคิล</td><td id="Total_recycle" class="right-side"></td></tr></table>
     <div class="endFameBar" style="height: 2.5%;"><div class="bad_fame_percent" id="redEnd"></div></div>
-    <a href="landing.html" target="_self"><button class="ButtPush">
-    Read Campaign
-</button>
-</a>`
+`
 
     let allWin = document.querySelectorAll(".WindowCanvas");
     allWin.forEach((el)=>{
@@ -195,7 +184,7 @@ function EndGame(){
 
              `;
     }
-    EndText.innerHTML += tableEnd
+    EndText.innerHTML = `<div class="cover">`+EndText.innerHTML+ tableEnd+`</div><a href="landing.html" target="_self" ><button class="ButtPush" style="z-index: 5">Read Campaign</button></a>`
     Total_produced.innerHTML = produced;
     Total_returned.innerHTML = Math.round(all_returned);
     Total_recycle.innerHTML = RecycleUse;
@@ -206,4 +195,11 @@ function EndGame(){
     else{
         redEnd.style.width = bad_fame_percent+`%`;
     }
+}
+
+function getGoing(){
+        EventShowUp.dataset.state = `off`;
+        timeState = setInterval(looktime, 125);
+        coinState = setInterval(per_Sec, 1000);
+
 }
