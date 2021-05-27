@@ -530,11 +530,13 @@ body, html {
     width: 37%;
     margin-top: 452vw;
     margin-left: 5vw;
+    animation: sangsong1 5s linear infinite alternate;
 }
 #col_epr_img4 {
     width: 37%;
     margin-top: 462vw;
     margin-left: 50vw;
+    animation: sangsong2 4s linear infinite alternate;
 }
 #epr_text1 {
     width: 37%;
@@ -565,6 +567,7 @@ body, html {
     width: 45%;
     margin-top: 590vw;
     margin-left: 4vw;
+    animation: sangsong3 7s linear infinite alternate;
 }
 #col_epr_text3 {
     width: 60%;
@@ -580,6 +583,7 @@ body, html {
     width: 40%;
     margin-top: 656vw;
     margin-left: 50vw;
+    animation: sangsong4 6s linear infinite alternate;
 }
 #col_epr_text4 {
     width: 45%;
@@ -668,22 +672,28 @@ body, html {
 #col1_epr_light_right1 {
     width: 50%;
     margin-top: 750vw;
-    margin-left: 50vw;
+    margin-left: 56.7vw;
+    transform-origin: top right;
+    animation: lumsang1 5s linear infinite alternate;
 }
 #col1_epr_light_left1 {
     width: 50%;
     margin-top: 770vw;
-    margin-left: 0vw;
+    margin-left: -10vw;
+    transform-origin: top left;
+    animation: lumsang2 5s linear infinite alternate;
 }
 #col1_epr_light_right2 {
     width: 50%;
     margin-top: 870vw;
     margin-left: 50vw;
+    animation: lumsang3 3s linear infinite alternate;
 }
 #col1_epr_light_left2 {
     width: 50%;
     margin-top: 870vw;
     margin-left: 0vw;
+    animation: lumsang4 3s linear infinite alternate;
 }
 
 /* ——————————————————————— อย่าซนสิ ——————————————————————— */
@@ -825,4 +835,28 @@ body, html {
     0% {transform: translateX(20px)}
     50% {transform: translateX(0)}
     100% {transform: translateX(20px)}
+}
+@keyframes sangsong1 {
+    0% {transform: rotateZ(9deg);}
+    100% {transform: rotateZ(0deg);}
+}
+@keyframes sangsong2 {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(60px);}
+}
+@keyframes sangsong3 {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(90px);}
+}
+@keyframes sangsong4 {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(90px);}
+}
+@keyframes lumsang1 {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(15deg);}
+}
+@keyframes lumsang2 {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(-15deg);}
 }
