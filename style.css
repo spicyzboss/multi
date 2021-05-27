@@ -674,7 +674,7 @@ body, html {
     cursor: pointer;
 }
 #callout_button:hover {
-    content: url("./img/callout_button1.png");
+    content: url("./img/callout_button.png");
 }
 #col1_epr_light_right1 {
     width: 50%;

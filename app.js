@@ -215,4 +215,4 @@ if (backtotop) {
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
 }
-callout = () => window.open("https://www.greenpeace.org/thailand/act/refuseplastic/", "_blank")
+callout = () => window.open("https://act.greenpeace.org/page/34356/petition/1?ea.tracking.id=Planet3", "_blank")
