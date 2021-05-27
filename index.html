@@ -803,25 +803,15 @@
             };
             if(my_curent_Coin >= cost[type]){
                 my_curent_Coin -= cost[type];
-                console.log(`Test dict|| cost: `+cost[type]);
-                console.log(el.id);
-                console.log(el.dataset.building);
                 el.innerHTML = building;
                 el.classList.remove("land");
                 el.dataset.building = type;
-                console.log(el.dataset.building);
                 countBuilding();
             }
         }
         function openTip(){
             TIP.dataset.state="on";
         }
-
-
-        function check(){
-            console.log("Clicked");
-        }
         </script>
     </body>
 </html>
-
