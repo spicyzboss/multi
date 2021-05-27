@@ -758,8 +758,14 @@
                 let pause = 0;
 
                 window.addEventListener("click", (e)=>{
-                    let target = e.target.parentElement.parentElement;
-                    let target2 = target.parentElement;
+                    let target, target2
+                    try{
+                        target = e.target.parentElement.parentElement;
+                        target2 = target.parentElement;
+                    }
+                    catch(error){
+                        error = null;
+                    }
                     Op.style.top = e.pageY + "px";
                     Op.style.left = e.pageX + "px";
                     Op.classList.remove("visible");
