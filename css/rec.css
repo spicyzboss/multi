@@ -9,7 +9,7 @@
     left: -2%;
     font-family: Alloy;
     z-index: 2;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .record{
     position: relative;
@@ -51,6 +51,8 @@ h1{
     display: inline-block;
     width: 40%;
     height: 10px;
+    bottom: 7.5%;
+    right: 2.5%;
     background: green;
     overflow: hidden;
     border-radius: 10px;
@@ -98,8 +100,7 @@ h1{
     bottom: 40%;
     border-radius: 20px;
     left: 15%;
-    font-family: Alloy;
-    z-index: 2;
+    font-family: sans-serif;
     overflow-x: hidden;
     border: 2px black;
     font-size: 30px;
@@ -118,13 +119,4 @@ h1{
     border-radius:20px;
     bottom: 27.5%;
     left: 30%;
-}
-#summary{
-    position: absolute;
-    width: 25vw;
-    height: 50vh;
-    background: gold;
-    border-radius: 20px;
-    bottom: 0;
-    left: 0;
 }

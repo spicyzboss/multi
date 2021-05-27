@@ -1,5 +1,4 @@
 .quiz, .preText{
-    font-family: Alloy;
     width: 90%;
     text-indent: 30px;
     margin-left: 5%;
@@ -44,6 +43,10 @@
     background: linear-gradient(to bottom, yellow, gold);
     z-index: 10;
     margin: auto;
+}
+.choice:hover{
+    box-shadow:0px 0px 7.5px gold;
+    cursor: pointer;
 }
 .ButtPush{
     position: absolute;
